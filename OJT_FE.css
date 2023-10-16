@@ -9,6 +9,7 @@ div {
 .wrap {
     width: 100%;
     height: 100%;
+  
 }
 
 /* 상단바 */
@@ -24,7 +25,9 @@ div {
 }
 /*메인 컨텐츠 창*/
 .Main_Content{
-    margin : 0px 20% 0px 20%;
+    padding: 24px;
+    height : 900px
+    
 }
 
 /*필수 컨텐츠 칸나누기*/
@@ -33,19 +36,69 @@ div {
     width: 100%;
    
 }
+.Life_Symptom_Up{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  
+}
+.Life_Symptom_Down{
+  display : flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.Life_Symptom{
+  border-radius: 6px;
+  width: 100%;
+}
 
 /*부제목 컨텐츠 상단 간격*/
 .Essential_Content, .Unessential_Int_Content, .Unessential_Float_Content{
-    margin-top: 3%;
+    margin-top: 16px;
 }
+/**/
+
+#User_Age, #User_Gender, #User_Diseace, #User_Visit,#User_Symptom #User_Symptom, #User_Emergencybus {text-align: right; padding-right: 24px;}
+.Essential_Age{position: relative; overflow: hidden;}
+.Unessential_Left {display:flex; flex: 140px; min-width: 140px; white-space: no-wrap;}
+.Unessential_Left ~ input{display:flex; flex: calc(100% - 140px);}
+.Unessential_Left ~ input{text-indent: 8px; height: 28px; line-height: 28px; border-radius: 4px; border-color: #cecece; margin-top: 8px; border-style: solid; border-width: 1px; margin-right: 4px;}
+.Unessential_Left ~ input::placeholder{font-size: 12px; color: red;}
+.Essential_Age span{position: relative; height: 20px; font-size: 12px; opacity: 0.8; top: 16px;}
 
 /*필수 컨텐츠 왼쪽(제목)*/
 .Essential_Left, .Unessential_Left{
+  padding: 0 8px;
     width: 20%;
     background-color: #8fb0c6;
     color: white;
     margin-right: 5%;
 }
+
+.Essential_Content_left{
+  width: 55%;
+  border: 1px solid blue;
+  min-width: 140px; 
+  white-space: no-wrap;
+}
+
+.Essential_Content_Right{
+  width: 45%;
+  
+}
+
+.Essential_Content{
+  width: 100%;
+  display: flex;
+}
+.Unessential_Int_Content{
+  display: flex;
+  flex-wrap: wrap;
+  height: 40%;
+  
+}
+
+
 /* 모달 */
 .Modal_Black_Bg{
   width: 100%;

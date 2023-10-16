@@ -10,12 +10,14 @@
 </head>
 <body>
     <div class="wrap">
+        <!-- Header(Navbar) -->
         <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark" id="Nav">
            <div class="Nav_Content">로고 </div> 
            <div class="Nav_Content">home</div>
            <div class="Nav_Content">환자입력</div> 
         </nav>
 
+        <!-- Modal 창 -->
         <div class="Modal_Black_Bg ">
             <div class="Modal_White_Bg">
                 <div class="Modal_Wrap">
@@ -30,50 +32,51 @@
             </div>
         </div>
 
-
+        <!-- 메인 컨텐츠 창  -->
         <div class="Main_Content">
+            <div class="Info_Tittle">
+             <h6>📌 내원당시 정보 </h6>
+            </div>
             <div class="Essential_Content">
-                필수*
+            <!-- 필수요소 항목 창 -->
+            
+            <div class="Essential_Content_left">
                 <div class="Essential_Age">
                     <div class="Essential_Left">나이</div>
                     <div class="Essential_right"></div>
-                    <input placeholder="숫자만 입력하시오">세</input>
+                    <div class="formBox" style="position: relative; width: auto;">
+                    <input id="User_Age" min="0" max="100" type="number" placeholder="N" style="border: none; border-bottom: 1px solid #ccc;" onchange="onChangeAge()"></input>
+                    <span style="position: absolute; right: 10px; top: 1px;" >세</span>
+                    <p id="setAgeMessage"></p>
+                </div>
+                
+                <style>
+                    .formBox input{border-radius: 4px;}
+                    .formBox input:hover, .formBox input:focus ,.formBox input:active{outline: 1px solid red;}
+              
+                </style>
                  </div>  
                  
                 <div class="Essential_Age">
                 <div class="Essential_Left">성별</div>
-                <input type="radio" value="M" name="gender">남 <input type="radio" value="F" name="gender">여
+                <input id="User_Gender" type="radio" value="M" name="gender">남 <input type="radio" value="F" name="gender">여
                 </div>
 
                 <div class="Essential_Age">
                 <div class="Essential_Left">발병일</div>
-                <input type="datetime-local">
+                <input id="User_Diseace"type="datetime-local">
                 </div>
                 
                 <div class="Essential_Age">
                 <div class="Essential_Left">내원일</div>
-                <input type="datetime-local">
+                <input id="User_Visit" type="datetime-local">
                 </div>
 
-                <div class="Essential_Age">
-                <div class="Essential_Left">구급차 이송여부</div>
-                <label>
-                    <input role="switch" type="checkbox" name="emergencybus" value="Y"/>
-                    <span>ㅇㅇ</span>
-                </label>
-                </div>
-
-                <div class="Essential_Age">
-                <div class="Essential_Left">외상(중독) 여부</div>
-                <label>
-                    <input role="switch" type="checkbox" name="addicted" value="Y"/>
-                    <span>ㅇㅇ</span>
-                </label>
-                </div>
+               
 
                 <div class="Essential_Age">
                 <div class="Essential_Left">주 증상</div>
-                <select name="Symptom">
+                <select name="Symptom" id="User_Symptom">
                     <option selected value="">---대표 증상을 선택하시오---</option>
                     <option value="1">발열</option>
                     <option value="2">저체온</option>
@@ -87,41 +90,88 @@
                
             </div>
 
+
+            <div class="Essential_Content_Right"> 
+
+                <div class="Essential_Age">
+                    <div class="Essential_Left">구급차 이송여부</div>
+                    <label>
+                        <input id="User_Emergencybus"role="switch" type="checkbox" name="emergencybus" value="Y"/>
+                        <span>ㅇㅇ</span>
+                    </label>
+                    </div>
+    
+                    <div class="Essential_Age">
+                    <div class="Essential_Left">외상(중독) 여부</div>
+                    <label>
+                        <input role="switch" type="checkbox" name="addicted" value="Y"/>
+                        <span>ㅇㅇ</span>
+                    </label>
+                    </div>
+
+            </div>
+        </div>
+             <div class="Info_Tittle">
+            <h6>* 활력 징후  </h6>
+           </div>
             <div class="Unessential_Int_Content">
-                선택1
-                <div class="Essential_Age">
-                    <div class="Unessential_Left">수축기 혈압  </div>
-                    <input placeholder="0~300 사이의 정수 입력" name="aa" value="">mmHg
-                </div>
+                
+                <div class="Life_Symptom_Up"> 
+                    <div class="Life_Symptom">
+                    <div class="Essential_Age">
+                        <div class="Unessential_Left">수축기 혈압  </div>
+                        <input placeholder="0~300 사이의 정수 입력"  id="User_Shrink"name="aa" value="" onchange="onChangeShrink()">
+                        <span>mmHg</span>
+                        <p id="setShrinkMessage"></p>
+                    </div>
+                    </div>
                     
-                <div class="Essential_Age">
-                    <div class="Unessential_Left">이완기 혈압  </div>
-                    <input placeholder="0~300 사이의 정수 입력">mmHg
-                </div>
+                    <div class="Life_Symptom"> 
+                    <div class="Essential_Age">
+                        <div class="Unessential_Left">이완기 혈압  </div>
+                        <input placeholder="0~300 사이의 정수 입력">
+                        <span>mmHg</span>
+                    </div>
+                    </div>
 
-                <div class="Essential_Age">
-                    <div class="Unessential_Left">맥박수 </div>
-                    <input placeholder="정수 입력">bpm
-                </div>   
-                    
-                <div class="Essential_Age">
-                    <div class="Unessential_Left">호흡수 </div>
-                    <input placeholder="0~60 사이의 정수 입력">bpm
-                </div>    
+                    <div class="Life_Symptom"> 
+                    <div class="Essential_Age">
+                        <div class="Unessential_Left">맥박수 </div>
+                        <input placeholder="정수 입력">
+                        <span>bpm</span>
+                    </div>   
+                    </div>
+                 </div>
 
-                <div class="Essential_Age">
-                    <div class="Unessential_Left">산소포화도 </div>
-                    <input placeholder="0~100 사이의 정수 입력">%
-                </div>
-                 
+                 <div class="Life_Symptom_Down">
+                    <div class="Life_Symptom"> 
+                    <div class="Essential_Age">
+                        <div class="Unessential_Left">호흡수 </div>
+                        <input placeholder="0~60 사이의 정수 입력">
+                        <span>bpm</span>
+                    </div>    
+                    </div>
+                    <div class="Life_Symptom"> 
+                    <div class="Essential_Age">
+                        <div class="Unessential_Left">산소포화도 </div>
+                        <input placeholder="0~100 사이의 정수 입력">
+                        <span>%</span>
+                    </div>
+
+                    </div>
+                    <div class="Life_Symptom">
+                    <div class="Essential_Age">
+                        <div class="Unessential_Left">체온</div>
+                        <input placeholder="0~45 실수 입력">
+                        <span>°C</span>
+                    </div>
+                    </div>
+                 </div>
             </div>
 
             <div class="Unessential_Float_Content">
-                선택2
-                <div class="Essential_Age">
-                    <div class="Unessential_Left">체온</div>
-                    <input placeholder="0~45 실수 입력">섭씨
-                </div>
+                * 채온 및 의식상태 
+               
                 <div class="Essential_Age">
                     <div class="Unessential_Left">의식상태</div>
                     <input placeholder="0~4 상태에 따라 입력">
@@ -176,6 +226,47 @@
 
         //값 모달에서 뿌리는것
         $('#Modal_Content1').html($('[name = "aa"]').val())
+
+        // 오류메시지 
+         
+        // 유효성 검사
+
+        // 값 저장 
+
+
+        const onChangeAge = (e) =>{
+            const currentAge = document.getElementById('User_Age').value;
+            
+            const Age_RegExp = /^(?:1[0-1]\d|120|[1-9])$/;
+
+            const Age_Message = document.getElementById('setAgeMessage')
+
+            if(!Age_RegExp.test(currentAge)){
+                Age_Message.innerHTML = "120살 이하로 입력해주세요";
+                Age_Message.style.color = "red";
+            }else{
+                Age_Message.innerHTML = "올바른 나이 입니다";
+                Age_Message.style.color = "green";
+            }
+            
+        }
+
+        const onChangeShrink = (e) =>{
+            const currentShrink = document.getElementsById('User_Shrink').value;
+
+            const Shrink_RegExp =  /^(300|[0-2]?\d?\d?)$/;
+
+            const Shrink_Message = document.getElementById('setShrinkMessage')
+
+            if(!Shrink_RegExp.test(currentShrink)){
+                Shrink_Message.innerHTML = "0~300 안으로 입력해주세요";
+                Shrink_Message.style.color = "red";
+            }else{
+                Shrink_Message.innerHTML = "올바른 수치 입니다";
+                Shrink_Message.style.color = "green";
+            }
+        }
+
     </script>
 
 
