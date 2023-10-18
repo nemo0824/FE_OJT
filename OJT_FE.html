@@ -118,12 +118,13 @@
                 
                 <div class="Life_Symptom_Up"> 
                     <div class="Life_Symptom">
-                    <div class="Essential_Age">
+                    <div class="Essential_Age" id="abc">
                         <div class="Unessential_Left">수축기 혈압  </div>
-                        <input placeholder="0~300 사이의 정수 입력"  id="User_Shrink"name="aa" value="" onchange="onChangeShrink()">
+                        <input placeholder="0~300 사이의 정수 입력"  id="User_Shrink" name="aa" onchange="onChangeShrink()">
                         <span>mmHg</span>
-                        <p id="setShrinkMessage"></p>
+                       
                     </div>
+                    <p id="setShrinkMessage"></p>
                     </div>
                     
                     <div class="Life_Symptom"> 
@@ -170,7 +171,22 @@
             </div>
 
             <div class="Unessential_Float_Content">
-                * 채온 및 의식상태 
+
+
+                
+                <div class="form_radio_btn radio_male">
+                    <input id="radio-1" type="radio" name="userSex" value="male" checked>
+                    <label for="radio-1">남자</label>
+                </div>
+                                             
+                <div class="form_radio_btn">
+                    <input id="radio-2" type="radio" name="userSex" value="female">
+                    <label for="radio-2">여자</label>
+                </div>
+
+
+
+
                
                 <div class="Essential_Age">
                     <div class="Unessential_Left">의식상태</div>
@@ -237,12 +253,12 @@
         const onChangeAge = (e) =>{
             const currentAge = document.getElementById('User_Age').value;
             
-            const Age_RegExp = /^(?:1[0-1]\d|120|[1-9])$/;
+            const Age_RegExp = /^(?:100|[1-9][0-9]?|0)$/;
 
             const Age_Message = document.getElementById('setAgeMessage')
 
             if(!Age_RegExp.test(currentAge)){
-                Age_Message.innerHTML = "120살 이하로 입력해주세요";
+                Age_Message.innerHTML = "100살 이하로 입력해주세요";
                 Age_Message.style.color = "red";
             }else{
                 Age_Message.innerHTML = "올바른 나이 입니다";
@@ -254,7 +270,7 @@
         const onChangeShrink = (e) =>{
             const currentShrink = document.getElementsById('User_Shrink').value;
 
-            const Shrink_RegExp =  /^(300|[0-2]?\d?\d?)$/;
+            const Shrink_RegExp =  /^(?:300|[1-9][0-9]?|0)$/;
 
             const Shrink_Message = document.getElementById('setShrinkMessage')
 
