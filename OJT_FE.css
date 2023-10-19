@@ -2,39 +2,7 @@
 
 
 /* 모달 */
-.Modal_Black_Bg{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: rgba(0,0,0,0.5);
-  z-index: -1;
-  padding: 30px;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 1s;
-}
 
-.Modal_White_Bg{
-  background: white;
-  border-radius: 5px;
-  visibility: visible;
-  opacity: 1;
-  padding: 30px;
-}
-
-.Open_Modal{
-  visibility: visible;
-  opacity: 1;
-  z-index: 5;
-}
-
-.Close_Modal{
-  visibility: hidden;
-  opacity: 1;
-}
-.Modal_Wrap{
-  padding: 10%;
-}
 
 
 
@@ -148,8 +116,84 @@
 		
 		/* modal */
 		.Modal_Wrap{box-shadow: 0.5px 0.5px 0.5px 0.5px var(--Gray_Color_2); }
-		.Modal_Wrap div {border: solid 1px red}
-		
+    .Modal_Black_Bg{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+      padding: 8px;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s;
+    }
+    
+    .Modal_White_Bg{
+      background: white;
+      border-radius: 5px;
+      visibility: visible;
+      opacity: 1;
+      padding: 8px;
+      width: 50%;
+      height: 50%;
+    }
+    
+    .Open_Modal{
+      visibility: visible;
+      opacity: 1;
+      z-index: 5;
+    }
+    
+    .Close_Modal{
+      visibility: hidden;
+      opacity: 1;
+    }
+    .Modal_Wrap{
+      display: flex;
+      flex-direction: column;
+      
+      padding: 16px;
+    }
+    #Modal_Wrap_Up{
+      display: flex;
+      width: 100%;
+      margin-bottom: 32px;
+      align-items: center;
+    }
+    .Modal_Wrap_Up_Content_1{
+      width: 50%;
+      background-color: var(--Custom_color_1);
+      color: var(--White_Color_1);
+      border-radius: 5px;
+      text-align: center;
+      height: 50px;
+      
+      
+    }
+    .Modal_Wrap_Up_Content_2{
+      width: 50%;
+      background-color: #d1ac2d;
+      color: var(--White_Color_1);
+      border-radius: 5px;
+      text-align: center;
+      height: 50px;
+      
+    }
+    #Modal_Wrap_Down{
+      display: flex;
+      flex-direction: column;
+    }
+    .Modal_Wrap_Up_Wrap{
+      display: flex;
+      width: 100%;
+    }
+    .Modal_Wrap_Down_Wrap{
+      display: flex;
+    }
+    .Modal_Wrap_Down_Content{
+      width: 50%;
+    }
+
 		/*Main_Panel*/
 		.Main_Panel{position: relative; width: 100%;  height: calc(100vh - 55px); background:  var(--White_Color_1); overflow: auto;}
 		
