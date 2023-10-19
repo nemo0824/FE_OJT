@@ -198,6 +198,19 @@
   /* 제출 버튼 */
   .SummitBtn{position: relative; width:calc(100% - 24px); margin: 0 16px; height: 55px; border-radius: 4px; border: 1px solid #ccc; background-color: var(--Blue_Color); color: var(--White_Color_1); font-weight: 700; transition: .3s;}
  .SummitBtn:hover{background-color: var(--Custom_color_1);}
+
+
+ /* range 색상 변경 */
+		 .Range_Color_0{accent-color: var(--Green_Color);}
+		 .Range_Color_1{accent-color: var(--Blue_Color);}
+		 .Range_Color_2{accent-color: var(--Orange_Color);}
+		 .Range_Color_3{accent-color: var(--Red_Color);}
+/* Range_Message 글자 색상변경 및 글자굵게  */
+		 .Range_Message_Color_0{color: var(--Green_Color); font-weight: bold;}
+		 .Range_Message_Color_1{color: var(--Blue_Color); font-weight: bold;}
+		 .Range_Message_Color_2{color: var(--Orange_Color); font-weight: bold;}
+		 .Range_Message_Color_3{color: var(--Red_Color); font-weight: bold;}
+		 
 	</style>
 </head>
 <body>
@@ -370,10 +383,17 @@
 		<div class="Main_Panel_Input">
 			<span class="title">의식상태</span>
 			<input type="number" id="User_Consciousness"  min="0" max="3" onchange="onChangeConsciousness()">
+			<!-- <p id="Consciousness_Message"></p>
+			<input id="User_Consciousness_Range" type="range" min="0" max="3" onchange="onChangeConsciousness_Range()"> -->
+			
+			
+		</div>
+		<div class="Main_Panel_Input">
 			<p id="Consciousness_Message"></p>
+		</div>
+
+		<div class="Main_Panel_Input">
 			<input id="User_Consciousness_Range" type="range" min="0" max="3" onchange="onChangeConsciousness_Range()">
-			
-			
 		</div>
 		
 		
@@ -532,25 +552,89 @@
 
 			const Consciousness_Message = document.getElementById('Consciousness_Message');
 			
-			const Consciousness_Range = document.getElementById('User_Consciousness_Range').value;
-
+			const Consciousness_Range = document.getElementById('User_Consciousness_Range');
+				// 다시 선택시 Range 색 초기화 
+				Consciousness_Range.classList.remove('Range_Color_0')
+				Consciousness_Range.classList.remove('Range_Color_1')
+				Consciousness_Range.classList.remove('Range_Color_2')
+				Consciousness_Range.classList.remove('Range_Color_3')
+				// 다시 선택시 Message 색 초기화
+				Consciousness_Message.classList.remove('Range_Message_Color_0')
+				Consciousness_Message.classList.remove('Range_Message_Color_1')
+				Consciousness_Message.classList.remove('Range_Message_Color_2')
+				Consciousness_Message.classList.remove('Range_Message_Color_3')
 			if(currentConsciousness == "0"){
 				Consciousness_Message.innerHTML = "명료";
 				Consciousness_Range.value = "0";
+				Consciousness_Range.classList.add('Range_Color_0')
+				Consciousness_Message.classList.add('Range_Message_Color_0')
 			}else if(currentConsciousness == "1"){
 				Consciousness_Message.innerHTML = "소리에 반응";
 				Consciousness_Range.value = "1";
+				Consciousness_Range.classList.add('Range_Color_1')
+				Consciousness_Message.classList.add('Range_Message_Color_1')
 			}else if(currentConsciousness == "2"){
 				Consciousness_Message.innerHTML = "통증에 반응";
 				Consciousness_Range.value = "2";
+				Consciousness_Range.classList.add('Range_Color_2')
+				Consciousness_Message.classList.add('Range_Message_Color_2')
 			}else if (currentConsciousness == "3"){
 				Consciousness_Message.innerHTML = "무반응";
 				Consciousness_Range.value = "3";
+				Consciousness_Range.classList.add('Range_Color_3')
+				Consciousness_Message.classList.add('Range_Message_Color_3')
 			}else {
-				Consciousness_Message.innerHTML = "잘못된 입력값입니다";
+				Consciousness_Message.innerHTML = "잘못된 입력 값 입니다";
+				
 			}
 		}
 
+		const onChangeConsciousness_Range = (e) =>{
+			const currentConsciousness_Range = document.getElementById('User_Consciousness_Range').value;
+			
+			const Consciousness_Message = document.getElementById('Consciousness_Message');
+			
+			const Consciousness = document.getElementById('User_Consciousness');
+
+			const Consciousness_Range = document.getElementById('User_Consciousness_Range');
+				// 다시 선택시 Range 색 초기화 
+				Consciousness_Range.classList.remove('Range_Color_0')
+				Consciousness_Range.classList.remove('Range_Color_1')
+				Consciousness_Range.classList.remove('Range_Color_2')
+				Consciousness_Range.classList.remove('Range_Color_3')
+				// 다시 선택시 Message 색 초기화
+				Consciousness_Message.classList.remove('Range_Message_Color_0')
+				Consciousness_Message.classList.remove('Range_Message_Color_1')
+				Consciousness_Message.classList.remove('Range_Message_Color_2')
+				Consciousness_Message.classList.remove('Range_Message_Color_3')
+			
+			if(currentConsciousness_Range == "0"){	
+				Consciousness_Message.innerHTML = "명료";			
+				Consciousness.value = "0";
+				Consciousness_Range.classList.add('Range_Color_0')
+				Consciousness_Message.classList.add('Range_Message_Color_0')
+			}else if(currentConsciousness_Range == "1"){
+				Consciousness_Message.innerHTML = "소리에 반응";
+				Consciousness.value = "1";
+				Consciousness_Range.classList.add('Range_Color_1')
+				Consciousness_Message.classList.add('Range_Message_Color_1')
+			}else if(currentConsciousness_Range == "2"){
+				Consciousness_Message.innerHTML = "통증에 반응";
+				Consciousness.value = "2";
+				Consciousness_Range.classList.add('Range_Color_2')
+				Consciousness_Message.classList.add('Range_Message_Color_2')
+			}else if (currentConsciousness_Range == "3"){
+				Consciousness_Message.innerHTML = "무반응";
+				Consciousness.value = "3";
+				Consciousness_Range.classList.add('Range_Color_3')
+				Consciousness_Message.classList.add('Range_Message_Color_3')
+			}else {
+				Consciousness_Message.innerHTML = "잘못된 입력 값 입니다";
+				
+			}
+		}
+
+	
 		
 
 </script>
