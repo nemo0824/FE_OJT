@@ -1,105 +1,4 @@
-@charset "utf-8";
 
-div {
-    box-sizing: border-box;
-    border: 1px solid red; 
-    
-  }
-
-.wrap {
-    width: 100%;
-    height: 100%;
-  
-}
-
-/* 상단바 */
-#Nav{
-    display: flex;
-    justify-content: flex-start;
-   
-}
-/* 상단바 버튼들 */
-.Nav_Content{
-    color: white;
-    margin-left: 10%;
-}
-/*메인 컨텐츠 창*/
-.Main_Content{
-    padding: 24px;
-    height : 900px;
-    flex-direction: row;
-}
-
-
-/*필수 컨텐츠 칸나누기*/
-.Essential_Age{
-    display: flex;
-    width: 100%;
-    
-   
-}
-.Life_Symptom_Up{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  
-}
-.Life_Symptom_Down{
-  display : flex;
-  width: 100%;
-  justify-content: space-between;
-}
-.Life_Symptom{
-  border-radius: 6px;
-  width: 100%;
-}
-
-/*부제목 컨텐츠 상단 간격*/
-.Essential_Content, .Unessential_Int_Content, .Unessential_Float_Content{
-    margin-top: 16px;
-}
-/**/
-
-#User_Age, #User_Gender, #User_Diseace, #User_Visit,#User_Symptom #User_Symptom, #User_Emergencybus {text-align: right; padding-right: 24px;}
-.Essential_Age{position: relative; overflow: hidden;}
-.Unessential_Left {display:flex; flex: 140px; min-width: 140px; white-space: no-wrap;}
-.Unessential_Left ~ input{display:flex; flex: calc(100% - 140px);}
-.Unessential_Left ~ input{text-indent: 8px; height: 28px; line-height: 28px; border-radius: 4px; border-color: #cecece; margin-top: 8px; border-style: solid; border-width: 1px; margin-right: 4px;}
-.Unessential_Left ~ input::placeholder{font-size: 12px; color: red;}
-.Essential_Age span{position: relative; height: 20px; font-size: 12px; opacity: 0.8; top: 16px;}
-
-/*필수 컨텐츠 왼쪽(제목)*/
-.Essential_Left, .Unessential_Left{
-  padding: 0 8px;
-    width: 20%;
-    background-color: #8fb0c6;
-    color: white;
-    margin-right: 5%;
-}
-
-.Essential_Content_left{
-  width: 55%;
-  border: 1px solid blue;
-  min-width: 140px; 
-  white-space: no-wrap;
-}
-
-.Essential_Content_Right{
-  width: 45%;
-  
-}
-
-.Essential_Content{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-.Unessential_Int_Content{
-  display: flex;
-  flex-wrap: wrap;
-  height: 40%;
-  
-}
 
 
 /* 모달 */
@@ -142,92 +41,6 @@ div {
 
 
 
-/*토글 css */
-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-  }
-  
-  [type="checkbox"] {
-    appearance: none;
-    position: relative;
-    border: max(2px, 0.1em) solid gray;
-    border-radius: 1.25em;
-    width: 2.25em;
-    height: 1.25em;
-  }
-  
-  [type="checkbox"]::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    transform: scale(0.8);
-    background-color: gray;
-    transition: left 250ms linear;
-  }
-  
-  [type="checkbox"]:checked {
-    background-color: tomato;
-    border-color: tomato;
-  }
-  
-  [type="checkbox"]:checked::before {
-    background-color: white;
-    left: 1em;
-  }
-  
-  [type="checkbox"]:disabled {
-    border-color: lightgray;
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
-  
-  [type="checkbox"]:disabled:before {
-    background-color: lightgray;
-  }
-  
-  [type="checkbox"]:disabled + span {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
-  
-  [type="checkbox"]:focus-visible {
-    outline-offset: max(2px, 0.1em);
-    outline: max(2px, 0.1em) solid tomato;
-  }
-  
-  [type="checkbox"]:enabled:hover {
-    box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
-  }
-  
-  /* Global CSS */
-
-
-  /* media query */
-  @media (max-width: 720px) {
-    .Essential_Content {
-      flex-direction: column;
-    }
-    /* .Essential_Age{
-      flex-direction: column;
-    } */
-    .Essential_Content_left{
-      width: 100%;
-    }
-    .Essential_Content_Right{
-      width: 100%;
-    }
-  }
-
-  #colorRange{
-    accent-color: red;
-  }
-
   .form_radio_btn {
     width: 47%;
     height : 45px;
@@ -248,7 +61,7 @@ label {
    
   /* Checked */
   .form_radio_btn input[type=radio]:checked + label {
-    background: #184DA0;
+    background: var(--Custom_color_2);
     color: #fff;
   }
    
@@ -262,3 +75,200 @@ label {
     background: #F9FAFC;
     color: #666;
   }
+
+  	/*기본 설정*/
+		html, body { height: 100%; width: 100%; overflow: hidden; }
+		*{ margin:0; padding: 0;
+		box-sizing:border-box; cursor: default;-ms-user-select: none;
+		-moz-user-select: -moz-none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		user-select: none; ; font-family: 'Noto Sans KR', sans-serif;}
+		input[type = "text"]{cursor: text; user-select: text;}
+		button{cursor: pointer;}
+		button * {cursor: pointer;}
+		a { color:inherit; text-decoration: none ;}
+		img { border:none; max-width:100% }
+		ol, ul { list-style-type: none}
+		table { border-collapse:collapse; table-layout:fixed;}
+		fieldset { border:none}
+		legend, caption { text-indent:-99999px; display:none }
+		address{font-style: normal;}
+		html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label {border: 0;vertical-align: baseline;}
+		strong{font-weight: normal;}
+		article, aside, details, figcaption, figure,
+		footer, header, hgroup, menu, nav, section {display: block;}
+		a{text-decoration: none;}
+		li{list-style: none;}
+		i.i{font: normal normal normal 14px/1 FontAwesome !important;}
+		
+		/*컬러 설정*/
+		/* 사용방법 : var(설정한 컬러코드) */
+		:root {
+			/* 메인 색상 설정*/
+			--Custom_color_1:#36622B ;
+			--Custom_color_2: #729D39 ;
+			--Custom_color_3: #C6E377 ;
+			--Custom_color_4: #FBFAD3 ;
+			
+			/* 기본 색상 설정*/
+			--Red_Color:     #ec2e2e ;
+			--Orange_Color:  #f89b00 ;
+			--Yellow_Color:  #f5cb56 ;
+			--Green_Color:   #007b17 ;
+			--Blue_Color:    #00498c ;
+
+			--Black_Color_1: #2a2a2a ;
+			--Black_Color_2: #353535 ;
+
+			--Gray_Color_1:  #3d3d3d ;
+			--Gray_Color_2:  #515151 ;
+
+			--White_Color_1: #F5F5F5 ;
+			--White_Color_2: #EAEAEA ;
+		}
+		
+		/*크롬 테두리 삭제*/
+		*:focus {outline:none;}
+		gridster-item:not(.gridster-item-moving) {z-index: 0 !important;}
+		gridster-preview{width: 0px !important; height: 0px !important;}
+
+		/*스크롤 디자인*/
+		body{-ms-overflow-style: none; }
+		::-webkit-scrollbar {-webkit-appearance: none;-webkit-box-shadow: inset 0 0 10px var(--Black_Color_1);height: 8px;width: 8px;}
+		::-webkit-scrollbar-track {background: none;}
+		::-webkit-scrollbar-corner {background: none;}
+		::-webkit-resizer {background: none;}
+		::-webkit-scrollbar-thumb {background-color:  var(--Black_Color_1);border-radius: 10px;}
+		
+		/*메인 네비*/
+		.Main_Nav{position: relative; width: 100%; height: 55px; background: var(--Custom_color_1); line-height: 55px; display: flex; justify-content: space-between; align-items: flex-start; text-align: center;}
+		.Main_Nav_Logo{flex-grow: 1; max-width: 100px; background: var(--Custom_color_2); color: white;}
+		.Main_Nav_Menu{flex-grow: 2;}
+		
+		/* modal */
+		.Modal_Wrap{box-shadow: 0.5px 0.5px 0.5px 0.5px var(--Gray_Color_2); }
+		.Modal_Wrap div {border: solid 1px red}
+		
+		/*Main_Panel*/
+		.Main_Panel{position: relative; width: 100%;  height: calc(100vh - 55px); background:  var(--White_Color_1); overflow: auto;}
+		
+		.Main_Panel_InputBox{position: relative; width: calc(100% - 24px); margin: 16px; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0px 1px 1px #ccc; background: #fff; height: auto;; padding: 16px; display: flex; flex-direction: row; margin-right: 8px; overflow: hidden;}
+		
+		.Main_Panel_Input{flex-grow: 1;  width: calc(100% / 4); height: 75px; flex-wrap: wrap; display: flex; flex-direction: row; justify-content: center; align-items: center; justify-items: center; position: relative;}
+		.title{display: inline-block; width: 100px; text-align: right; padding-right: 16px; font-weight: 400; letter-spacing: 0.1px;  border-right: 1px solid #ccc;}
+		/* .Main_Panel_Input input, select{border: none; border: 1px solid #ccc; margin-left: 8px; margin-right: 8px; height: 26px; line-height: 26px; border-radius: 4px; margin-left: 16px; font-size: 10px; width: calc(100% - 100px - 36px)} */
+		.Main_Panel_Input select {border: none; border: 1px solid #ccc; margin-left: 8px; margin-right: 8px; height: 26px; line-height: 26px; border-radius: 4px; margin-left: 16px; font-size: 10px; width: calc(100% - 100px - 36px)}
+		/* .Main_Panel_Input input {border: none; text-align: right; border: 1px solid #ccc; padding: 0px 32px 0px 0px;  margin-left: 8px; margin-right: 8px; height: 26px; line-height: 26px; border-radius: 4px; margin-left: 16px; font-size: 10px; width: calc(100% - 100px - 36px)} */
+		.Main_Panel_Input input {
+		border: none;
+		text-align: right;
+		border: 1px solid #ccc;
+		height: 26px;
+		line-height: 26px;
+		border-radius: 4px;
+		font-size: 10px;
+		width: calc(100% - 100px - 10px);
+		margin-left: 10px;
+		padding-right: 40px;
+		
+
+}
+		
+		.tip{position: absolute; top: 15px; left: 4px; font-size: 10px; opacity: 0.7; width: 100%; margin-right: 16px; color: var(--Red_Color); font-weight: 700; text-align: left;}
+		.setAgeMessage {position: relative; bottom: 6px; font-weight :700; opacity:0.7; font-size: 10px; line-height: 0.5px;} 
+		
+		/* 단위 */
+		.unit{position : absolute; font-size: 10px; opacity: 1; width: 24px; margin-right: 8px; right: 20px; color: var(--Black_Color_1); }
+		.unit_Age{position : absolute; font-size: 10px; opacity: 1; width: 10px; margin-right: 8px; right: 20px; color: var(--Black_Color_1);}
+
+		/* 유효성 검사 탈부착 색상 */
+		.Valid_Green{position: absolute; bottom: 8px; left: 124px; font-weight :700; opacity:0.7; font-size: 10px; line-height: 0.5px; color: green;} 
+		.Valid_Red {position: absolute; bottom: 8px; left: 124px; font-weight :700; opacity:0.7; font-size: 10px; line-height: 0.5px; color: red;}
+
+		/*radio_*/
+		/* .radio_wrap{display: flex; flex-grow: 1; width: calc(100% / 4); height: 75px; flex-wrap: wrap; display: flex; flex-direction: row; justify-content: center; align-items: center; justify-items: center; position: relative;} */
+		.radio_wrap{
+    display: flex;
+    flex-grow: 1;
+    height: 75px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    width: calc(100% - 100px - 10px);
+    margin-left: 10px;
+      }
+		/* .form_radio_btn {
+  			width: 47%;
+    		height : auto;
+      		border-radius: 10px;
+			border: transparent;
+  		} */
+	.form_radio_btn {
+		width: 50%;
+		height: auto;
+		border-radius: 10px;
+		border: transparent;
+		width: calc(50% - 5px);
+	}
+  		.form_radio_btn input[type=radio] {
+    	display: none;
+  		}
+  		.form_radio_btn label {
+    	display: block;
+      	border-radius: 10px;
+       	margin: 10px auto;
+      	text-align: center;
+      	height: -webkit-fill-available;;
+      	line-height: 30px;
+		  border: 1px solid #ccc;
+  		}
+   
+  		/* Checked */
+  		.form_radio_btn input[type=radio]:checked + label + {
+    	background: var(--Custom_color_2);
+    	color: #fff;
+		
+  		}
+   
+  		/* Hover */
+  		.form_radio_btn label:hover {
+    	color: #666;
+  		}
+   
+  		/* Disabled */
+  		.form_radio_btn input[type=radio] + label {
+   		background: #F9FAFC;
+   		color: #666;
+ 		 }
+
+		 /* 의식상태 input */
+		
+
+  /* 제출 버튼 */
+  .SummitBtn{position: relative; width:calc(100% - 24px); margin: 0 16px; height: 55px; border-radius: 4px; border: 1px solid #ccc; background-color: var(--Custom_color_1); color: var(--White_Color_1); font-weight: 700; transition: .3s;}
+ .SummitBtn:hover{background-color: var(--Custom_color_1);}
+
+
+ /* range 색상 변경 */
+		 .Range_Color_0{accent-color: var(--Green_Color);}
+		 .Range_Color_1{accent-color: var(--Blue_Color);}
+		 .Range_Color_2{accent-color: var(--Orange_Color);}
+		 .Range_Color_3{accent-color: var(--Red_Color);}
+/* Range_Message 글자 색상변경 및 글자굵게  */
+		 .Range_Message_Color_0{color: var(--Green_Color); font-weight: bold;}
+		 .Range_Message_Color_1{color: var(--Blue_Color); font-weight: bold;}
+		 .Range_Message_Color_2{color: var(--Orange_Color); font-weight: bold;}
+		 .Range_Message_Color_3{color: var(--Red_Color); font-weight: bold;}
+
+/* 햄버거 버튼 */
+     #Hamberger_Icon{
+      font-size: 50px;
+      box-shadow: 0.1px 0.1px 0.2px 0.2px ;
+      
+     }
+		 
