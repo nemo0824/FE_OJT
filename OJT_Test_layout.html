@@ -46,26 +46,34 @@
 		<div class="Modal_Black_Bg ">
 			<div class="Modal_White_Bg">
 				<div class="Modal_Header">
-					<div class="Modal_Header_Logo">로고</div>
+					<div class="Modal_Header_Logo">
+						<img src="./Cnt_logo_old_white.png" id="Header_Logo">
+					</div>
 					<div class="Modal_Header_Title">응급 판별도</div>
+					<div class="Modal_Header_Close">
+						<span class="material-icons-outlined" style="color: white;">
+							close
+							</span>
+					</div>
 				</div>
 				<div class="Modal_Wrap">
 					<div class="Modal_Wrap_Up">
-						<div class="Modal_Wrap_Up_Content">회원정보</div>
+						<span class="Modal_tip"> 회원정보</span>
 						<div class="Modal_Wrap_Up_Content">
 							<div class="Modal_Wrap_Up_Content_Title">나이</div>
-							<div class="Modal_Wrap_Up_Content_Value">몇살</div>
+							<div class="Modal_Wrap_Up_Content_Value" id="Modal_Age">몇살</div>
 						</div>
 						<div class="Modal_Wrap_Up_Content">
 							<div class="Modal_Wrap_Up_Content_Title">성별</div>
-							<div class="Modal_Wrap_Up_Content_Value">여자/남자</div>
+							<div class="Modal_Wrap_Up_Content_Value" id="Modal_Gender">Male</div>
 						</div>
 						<div class="Modal_Wrap_Up_Content">
 							<div class="Modal_Wrap_Up_Content_Title">내원일</div>
-							<div class="Modal_Wrap_Up_Content_Value">몇년도 몇월 몇시 몇분 </div>
+							<div class="Modal_Wrap_Up_Content_Value" id="Modal_Hospital"> </div>
 						</div>
-					</div>	
+					</div>
 					<div class="Modal_Wrap_Down">
+						<span class="Modal_tip"> 종합평가</span>
 						<div class="Modal_Wrap_Down_Content">
 							<div class="Modal_Wrap_Down_Content_Title">입원필요성</div>
 							<div class="Modal_Wrap_Down_Content_Value">몇점</div>
@@ -75,16 +83,19 @@
 							<div class="Modal_Wrap_Down_Content_Value">몇점</div>
 						</div>
 						<div class="Modal_Wrap_Down_Content">
-							<div class="Modal_Wrap_Down_Content_Title">사망필요성</div>
+							<div class="Modal_Wrap_Down_Content_Title">사망위험성</div>
 							<div class="Modal_Wrap_Down_Content_Value">몇점</div>
 						</div>
 					</div>
+						<div class="Modal_Wrap_Down1">
+							<button id="Modal_Close"> 닫기 </button>
+						</div>
 				</div>
-				<button id="Modal_Close"> 닫기 </button> 
+
 			</div>
-		
+
 		</div>
- 
+
 		<div class="Main_Panel">
 
 			<div id="test23">
@@ -102,13 +113,13 @@
 								<span class="title">성별</span>
 								<div class="radio_wrap">
 									<div class="form_radio_btn radio_male">
-										<input id="radio-1" type="radio" name="userSex" value="male" checked
+										<input id="radio-1" type="radio" name="userSex" value="Male" checked
 											onchange="onChangeGender()">
 										<label for="radio-1">남자</label>
 									</div>
 
 									<div class="form_radio_btn">
-										<input id="radio-2" type="radio" name="userSex" value="female"
+										<input id="radio-2" type="radio" name="userSex" value="Female"
 											onchange="onChangeGender()">
 										<label for="radio-2">여자</label>
 									</div>
@@ -242,10 +253,9 @@
 						<div class="Main_Panel_InputBox_Right_Third">
 							<div class="Main_Panel_Input">
 								<span class="title">의식상태</span>
-								<input type="number" id="User_Consciousness" min="0" max="3"
+								<input type="number" id="User_Consciousness" min="0" max="3" value="0"
 									onchange="onChangeConsciousness()">
-								<!-- <p id="Consciousness_Message"></p>
-			<input id="User_Consciousness_Range" type="range" min="0" max="3" onchange="onChangeConsciousness_Range()"> -->
+								
 
 
 							</div>
@@ -254,8 +264,7 @@
 							</div>
 
 							<div class="Main_Panel_Input">
-								<input id="User_Consciousness_Range" type="range" min="0" max="3"
-									onchange="onChangeConsciousness_Range()">
+								<input id="User_Consciousness_Range" type="range" min="0" max="3" value="0" onchange="onChangeConsciousness_Range()">
 							</div>
 
 
@@ -266,7 +275,7 @@
 					</div>
 				</div>
 				<div id="test4">
-					<button id="Modal" class="SummitBtn">버튼</button>
+					<button id="Modal" class="SummitBtn" >제출</button>
 				</div>
 			</div>
 
@@ -299,6 +308,8 @@
 		let isDiseaseDate = false;
 		let isHospital = false;
 
+
+	
 		// 유효성검사 
 		const onChangeAge = (e) => {
 			const currentAge = document.getElementById('User_Age').value;
@@ -321,6 +332,7 @@
 			}
 
 		}
+		
 
 
 		const onChangeShrink = (e) => {
@@ -455,7 +467,9 @@
 				isTemperature = true;
 			}
 		}
-
+		// 의식상태 Range 초기값 설정
+		document.getElementById('User_Consciousness_Range').value = 0;
+		
 
 		// 의식상태 JS
 		const onChangeConsciousness = (e) => {
@@ -506,7 +520,7 @@
 				isConsciousness = false;
 			}
 		}
-
+		//의식상태 Range 유효성검사
 		const onChangeConsciousness_Range = (e) => {
 			const currentConsciousness_Range = document.getElementById('User_Consciousness_Range').value;
 
@@ -525,6 +539,8 @@
 			Consciousness_Message.classList.remove('Range_Message_Color_1')
 			Consciousness_Message.classList.remove('Range_Message_Color_2')
 			Consciousness_Message.classList.remove('Range_Message_Color_3')
+
+		
 
 			if (currentConsciousness_Range == "0") {
 				Consciousness_Message.innerHTML = "명료";
@@ -565,7 +581,32 @@
 				isDiseaseDate = true;
 			}
 		}
+		// 내원일 수정
+		function getCurrentDateTime() {
+				const now = new Date();
+				const year = now.getFullYear();
+				const month = now.getMonth() + 1;
+				const day = now.getDate();
+				const hours = now.getHours();
+				const minutes = now.getMinutes();
 
+				const formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}T${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+				return formattedDate;
+			}
+
+			function ModalgetCurrentDateTime() {
+				const now = new Date();
+				const year = now.getFullYear();
+				const month = now.getMonth() + 1;
+				const day = now.getDate();
+				const hours = now.getHours();
+				const minutes = now.getMinutes();
+
+				const formattedDate = `${year}년 ${month.toString().padStart(2, '0')}월 ${day.toString().padStart(2, '0')}일 ${hours.toString().padStart(2, '0')}시 ${minutes.toString().padStart(2, '0')}분 `;
+				return formattedDate;
+			}
+		document.getElementById('Hospital_Enroll').value = getCurrentDateTime();
+		document.getElementById('Modal_Hospital').innerHTML = ModalgetCurrentDateTime();	
 
 
 		//내원일
@@ -573,9 +614,20 @@
 			const hospitalEnrollInput = document.getElementById('Hospital_Enroll');
 			const userInput = event.target.value;
 
+
+
 			if (userInput) {
+
+				const date = new Date(userInput)
+				const year = date.getFullYear();
+				const month = date.getMonth() + 1; 
+				const day = date.getDate();
+				const hours = date.getHours();
+				const minutes = date.getMinutes();
+
+				const formattedDate = `${year}년 ${month}월 ${day}일 ${hours}시 ${minutes}분`;
 				hospitalEnrollInput.value = userInput;
-				document.getElementById('Modal_Hospital').innerHTML = userInput;
+				document.getElementById('Modal_Hospital').innerHTML = formattedDate;
 				isHospital = true;
 
 			} else {
@@ -584,9 +636,9 @@
 			}
 		}
 
-
+	
 		const onChangeGender = (e) => {
-			document.getElementById('Modal_Gender').innerHTML = 'male';
+			document.getElementById('Modal_Gender').innerHTML = 'Male';
 			// 애초에 이게 onChange함수이기때문에 아무선택안하면 이함수자체가 작동이안됨 흠 
 			// -> 걍 하드코딩 박아놓으면 어떤지 확인
 			var radioButtons = document.getElementsByName('userSex');
@@ -606,13 +658,13 @@
 
 		// 모달 버튼 누르면 모달 오픈(값이 true일시 열리기)
 		document.getElementById('Modal').addEventListener('click', function () {
-			// if(isAge && isShrink && isRelaxation && isPulse && isBreath && isOxygen && isTemperature && isConsciousness && isDiseaseDate && isHospital){
+			if(isAge && isShrink && isRelaxation && isPulse && isBreath && isOxygen && isTemperature && isConsciousness && isDiseaseDate && isHospital){
 			document.querySelector('.Modal_Black_Bg').classList.add('Open_Modal');
 			console.log('성공')
-			// }else{
-			// 	alert("입력값을 다시 확인해주세요")
-			// 	console.log('실패')
-			// }
+			}else{
+				alert("입력값을 다시 확인해주세요")
+				console.log('실패')
+			}
 
 
 		})
@@ -630,6 +682,8 @@
 
 		// 모달 움직이기 
 		$('.Modal_White_Bg').draggable();
+
+	
 	</script>
 
 </body>

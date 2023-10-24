@@ -239,8 +239,8 @@ body {
   visibility: visible;
   opacity: 1;
   /* padding: 8px; */
-  width: 50%;
-  height: 68vh;
+  width: 40%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
 }
@@ -325,11 +325,13 @@ body {
 }
 
 #Modal_Close{
-	width: 64px;
+	width: 80px;
+  height: 40px;
 	background-color: var(--Custom_color_2);
 	color: var(--White_Color_1);
 	border-radius: 4px;
-	box-shadow: 0.1px 0.2px 0.1px 0.2px inset;
+  border: transparent;
+	
 }
 
 /*Main_Panel*/
@@ -533,7 +535,7 @@ body {
 }
 
 /*radio_*/
-/* .radio_wrap{display: flex; flex-grow: 1; width: calc(100% / 4); height: 75px; flex-wrap: wrap; display: flex; flex-direction: row; justify-content: center; align-items: center; justify-items: center; position: relative;} */
+
 .radio_wrap {
   display: flex;
   flex-grow: 1;
@@ -548,12 +550,7 @@ body {
   width: calc(100% - 100px - 10px);
   margin-left: 10px;
 }
-/* .form_radio_btn {
-  			width: 47%;
-    		height : auto;
-      		border-radius: 10px;
-			border: transparent;
-  		} */
+
 .form_radio_btn {
   width: 50%;
   height: auto;
@@ -596,8 +593,8 @@ body {
 /* 제출 버튼 */
 .SummitBtn {
   position: relative;
-  width: 100%;
-  /* margin: 0 16px; */
+  width: calc(100% - 16px - 16px);
+  margin: 0 16px;
   height: 55px;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -665,7 +662,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* box-sizing: border-box; */
+
 }
 
 #test23 {
@@ -673,12 +670,12 @@ body {
 
   display: flex;
   flex-direction: column;
-  /* box-sizing: border-box; */
+
 }
 
 #test5 {
   display: flex;
-  /* box-sizing: border-box; */
+
 }
 
 #Logo{
@@ -718,52 +715,145 @@ body {
   .Modal_Header{
 	width: 100%;
 	height: 50px;
-	border: 1px solid red;
+	background-color: var(--Custom_color_2);
 	display: flex;
 	align-items: center;
+  padding: 16px;
   }
   .Modal_Wrap{
 	width: 100%;
 	height: 100%;
-	border: 1px solid blue;
+	/* border: 1px solid blue; */
 	display: flex;
 	flex-direction: column;
+  padding: 16px;
   }
   .Modal_Wrap_Up{
 	display: flex;
 	flex-direction: column;
-	border: 1px solid yellow;
+	/* border: 1px solid yellow; */
 	width: 100%;
 	height: 50%;
+  padding: 16px 16px 8px 16px;
   }
   .Modal_Wrap_Down{
 	display: flex;
 	flex-direction: column;
 	height: 50%;
 	width: 100%;
+  padding: 8px 16px 16px 16px;
   }
   .Modal_Wrap_Up_Content{
-	border : 1px solid purple;
+	/* border : 1px solid purple; */
 	display: flex;
   }
   .Modal_Wrap_Down_Content{
-	border : 1px solid yellowgreen;
+	/* border : 1px solid yellowgreen; */
 	display: flex;
   }
 
   .Modal_Header_Logo{
-	border: 1px solid black;
-	flex-grow: 1;
+	/* border: 1px solid black; */
+  height: 100%;
+	flex-grow: 1.5;
+  display: flex;
+  align-items: center;
   }
   .Modal_Header_Title{
-	border: 1px solid black;
-	flex-grow: 9;
+	/* border: 1px solid black; */
+	flex-grow: 8;
+  height: 100%;
+  }
+  .Modal_Header_Close{
+    flex-grow: 1;
+    /* border: 1px solid black; */
+    height: 100%;
   }
 
-  .Modal_Wrap_Up_Content_Title{
-	width: 50%;
+
+ 
+  #Header_Logo{
+    width: auto;
+    height: 18px;
   }
+  #Header_Close{
+    width: auto;
+    height: 35px;
+    width: 40px;
+  }
+
   .Modal_Wrap_Down_Content_Title{
-	width: 50%;
+  width: 40%;
+  border-radius: 4px;
+  height: 50px;
+  margin-top: 16px;
+  background-color: var(--Custom_color_4);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  
   }
+
+  .Modal_Wrap_Down_Content_Value{
+    width: 60%;
+    border-radius: 4px;
+    height: 50px;
+    margin-top: 16px;
+    background-color: var(--White_Color_2);
+    display: flex;
+    align-items: center;
+    padding: 16px;
+   
+  }
+  .Modal_Wrap_Up_Content_Title{
+  width: 40%;
+  border-radius: 4px;
+  height: 50px;
+  margin-top: 16px;
+  background-color: var(--Custom_color_3);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  
+  }
+
+  .Modal_Wrap_Up_Content_Value{
+    width: 60%;
+    border-radius: 4px;
+    height: 50px;
+    margin-top: 16px;
+    background-color: var(--White_Color_2);
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    
+  }
+
+  .Modal_tip{
+  font-size: 13px;
+  opacity: 0.7;
+  color: var(--Red_Color);
+  font-weight: 700;
+  border-bottom: 1px solid #808080;
+  height: 30px;
+  }
+
+  .Modal_Header_Title{
+    font-size: 20px;
+    color: var(--White_Color_1);
+    display: flex;
+    align-items: center;
+    
+  }
+  .Modal_Header_Close{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .Modal_Wrap_Down1{
+    display: flex;
+    justify-content: right;
+    padding: 16px;
+  }
+ 
   
