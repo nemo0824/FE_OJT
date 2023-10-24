@@ -469,8 +469,9 @@
 		}
 		// 의식상태 Range 초기값 설정
 		document.getElementById('User_Consciousness_Range').value = 0;
-		
-
+		document.getElementById('Consciousness_Message').innerHTML = "명료";
+		document.getElementById('User_Consciousness_Range').classList.add('Range_Color_0')
+		document.getElementById('Consciousness_Message').classList.add('Range_Message_Color_0')
 		// 의식상태 JS
 		const onChangeConsciousness = (e) => {
 
