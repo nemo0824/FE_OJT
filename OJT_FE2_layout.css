@@ -163,14 +163,13 @@ body {
 
 .header {
   height: 50px;
-  border: 3px solid blue;
-  background-color: var(--CusTom_color_5);
+  /* border: 3px solid blue; */
+  background-color: #408d86;
 }
 .wrap {
-  border: 3px solid green;
   width: 100%;
   height: calc(100% - 50px);
-  background-color: var(--White_Color_1);
+  background-color: #e0f2f1;
 }
 .Content {
   display: flex;
@@ -183,51 +182,57 @@ body {
 .Contnent_In {
   display: flex;
   flex-direction: column;
-  border: 3px solid red;
-  width: 80%;
+  /* border: 3px solid red; */
+  width: 50%;
   height: 100%;
 }
 .Input_Box_Content {
   margin-top: 16px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 .Input_Box_Atype {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0px 1px 1px #ccc;
-  background: #fff;
-  width: 100%;
+  background: #d0ebea;
+  width: calc(100% - 32px);
   height: 100%;
+  margin: 16px 16px 0px 16px;
 }
 
 .Input_Box_Btype {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0px 1px 1px #ccc;
-  background: #fff;
-  width: 100%;
+  background: #d0ebea;
+  width: calc(100% - 32px);
   height: 100%;
+  margin: 16px 16px 0px 16px;
 }
 
 .Input_Box {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0px 1px 1px #ccc;
-  background: #fff;
+  background: #d0ebea;
   /* overflow: hidden; */
-  width: 100%;
+  width: calc(100% -32px);
+  margin: 16px 16px 0px 16px;
   height: 20%;
   display: flex;
-  flex-direction: column;
 }
 
 .Content_Atype {
-  height: 40%;
+  height: 60%;
   display: block;
+  justify-content: center;
 }
 .Content_Btype {
-  height: 50%;
+  height: 75%;
   display: none;
 }
 
@@ -236,10 +241,51 @@ body {
   align-items: center;
   width: 200px;
   text-align: right;
-  border-right: 1px solid #ccc;
-  justify-content: right;
+  border-bottom: 1px solid #ccc;
+  justify-content: left;
   margin-right: 8px;
   padding: 16px;
+}
+
+#Btype_User_Age {
+  text-align: right;
+  border: 1px solid #ccc;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 4px;
+  font-size: 10px;
+  width: 50%;
+  margin-left: 10px;
+  padding-right: 40px;
+}
+
+#Atype_User_Age {
+  text-align: right;
+  border: 1px solid #ccc;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 4px;
+  font-size: 10px;
+  width: calc(100% -200px -10px);
+  margin-left: 10px;
+  padding-right: 40px;
+}
+
+.Input_Wrap {
+  height: 50px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  width: calc(100% - 200px - 10px);
+  margin-left: 10px;
+}
+.Input_Box_Content_Row {
+  display: flex;
+  flex-direction: row;
 }
 
 /*radio_*/
@@ -247,7 +293,7 @@ body {
 .radio_wrap {
   display: flex;
   flex-grow: 1;
-  height: 20px;
+  height: 50px;
 
   flex-wrap: wrap;
   display: flex;
@@ -282,7 +328,7 @@ body {
 
 /* Checked */
 .form_radio_btn input[type="radio"]:checked + label {
-  background: var(--Custom_color_1);
+  background: #26a69a;
   color: #fff;
 }
 
@@ -339,7 +385,7 @@ body {
 .Modal_Header {
   width: 100%;
   height: 50px;
-  background-color: var(--Custom_color_2);
+  background-color: #408d86;
   display: flex;
   align-items: center;
   padding: 16px;
@@ -353,9 +399,8 @@ body {
 }
 .Modal_Wrap_Up_Wrap {
   display: flex;
-  
 }
-.Modal_Wrap_Down_Wrap{
+.Modal_Wrap_Down_Wrap {
   margin-top: 32px;
   border-radius: 4px;
   width: 100%;
@@ -385,7 +430,7 @@ body {
   width: 50%;
   margin-right: 8px;
 }
-.Modal_Wrap_Up_Content_Right{
+.Modal_Wrap_Up_Content_Right {
   display: flex;
   width: 50%;
 }
@@ -426,7 +471,7 @@ body {
   border-radius: 4px;
   height: 50px;
   margin-top: 16px;
-  background-color: var(--Custom_color_4);
+  background-color: #43a49b;
   display: flex;
   align-items: center;
   padding: 16px;
@@ -451,10 +496,11 @@ body {
   border-radius: 4px;
   height: 50px;
   margin-top: 16px;
-  background-color: var(--Custom_color_3);
+  background-color: #43a49b;
   display: flex;
   align-items: center;
   padding: 16px;
+  color: var(--White_Color_1);
 }
 
 .Modal_Wrap_Up_Content_Value {
@@ -493,19 +539,34 @@ body {
   justify-content: right;
   padding: 16px;
 }
-.Atype_Result_Red{
+.Atype_Result_Red {
   color: var(--Red_Color);
 }
-.Atype_Result_Orange{
+.Atype_Result_Orange {
   color: var(--Orange_Color);
 }
-.Atype_Result_Green{
+.Atype_Result_Green {
   color: var(--Green_Color);
 }
-
-
+.Input_Box_Header {
+  width: 100%;
+  color: white;
+  background-color: #408d86;
+  height: 30px;
+  text-align: center;
+}
 
 /* Btype 모달 */
+.submit {
+  background-color: #80cbc4;
+  width: calc(100% - 32px);
+  border: transparent;
+  border-radius: 4px;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+}
+
 .B_Modal_Black_Bg {
   width: 100%;
   height: 100%;
@@ -547,7 +608,7 @@ body {
 .B_Modal_Header {
   width: 100%;
   height: 50px;
-  background-color: var(--Custom_color_2);
+  background-color: #408d86;
   display: flex;
   align-items: center;
   padding: 16px;
@@ -561,9 +622,8 @@ body {
 }
 .B_Modal_Wrap_Up_Wrap {
   display: flex;
-  
 }
-.B_Modal_Wrap_Down_Wrap{
+.B_Modal_Wrap_Down_Wrap {
   margin-top: 32px;
   border-radius: 4px;
   width: 100%;
@@ -593,7 +653,7 @@ body {
   width: 50%;
   margin-right: 8px;
 }
-.B_Modal_Wrap_Up_Content_Right{
+.B_Modal_Wrap_Up_Content_Right {
   display: flex;
   width: 50%;
 }
@@ -634,7 +694,7 @@ body {
   border-radius: 4px;
   height: 50px;
   margin-top: 16px;
-  background-color: var(--Custom_color_4);
+  background-color: #43a49b;
   display: flex;
   align-items: center;
   padding: 16px;
@@ -659,7 +719,7 @@ body {
   border-radius: 4px;
   height: 50px;
   margin-top: 16px;
-  background-color: var(--Custom_color_3);
+  background-color: #26a69a;
   display: flex;
   align-items: center;
   padding: 16px;
@@ -701,12 +761,29 @@ body {
   justify-content: right;
   padding: 16px;
 }
-.Atype_Result_Red{
+.Atype_Result_Red {
   color: var(--Red_Color);
 }
-.Atype_Result_Orange{
+.Atype_Result_Orange {
   color: var(--Orange_Color);
 }
-.Atype_Result_Green{
+.Atype_Result_Green {
   color: var(--Green_Color);
+}
+/* 공통 */
+.Span_Title_Explain{
+  font-size: 10px;
+  opacity: 0.7;
+  color: var(--Blue_Color);
+  font-weight: 700;
+}
+
+.Span_Tittle_Explain{
+  font-size: 10px;
+  opacity: 0.7;
+  color: var(--Blue_Color);
+  font-weight: 700;
+}
+.Input_Box_Tittle{
+  width: 50%;
 }
