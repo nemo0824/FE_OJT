@@ -164,7 +164,8 @@ body {
 .header {
   height: 50px;
   /* border: 3px solid blue; */
-  background-color: #408d86;
+  background-color: #e0f2f1;
+  border-bottom: 5px solid white;
 }
 .wrap {
   width: 100%;
@@ -177,6 +178,7 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+  min-width: 1200px;
 }
 
 .Contnent_In {
@@ -187,37 +189,34 @@ body {
   height: 100%;
 }
 .Input_Box_Content {
-  margin-top: 16px;
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   width: 50%;
+  padding: 16px;
 }
 .Input_Box_Atype {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0px 1px 1px #ccc;
+  border-radius: 2px;
+  box-shadow: 1px 0px 4px inset #b0cbca;
   background: #d0ebea;
   width: calc(100% - 32px);
   height: 100%;
-  margin: 16px 16px 0px 16px;
+  margin: 16px 16px 16px 16px;
 }
 
 .Input_Box_Btype {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0px 1px 1px #ccc;
+  border-radius: 2px;
+  box-shadow: 1px 0px 4px inset #b0cbca;
   background: #d0ebea;
   width: calc(100% - 32px);
   height: 100%;
-  margin: 16px 16px 0px 16px;
+  margin: 16px 16px 16px 16px;
 }
 
 .Input_Box {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0px 1px 1px #ccc;
+  border-radius: 2px;
+  box-shadow: 1px 0px 4px inset #b0cbca;
   background: #d0ebea;
   /* overflow: hidden; */
   width: calc(100% -32px);
@@ -227,52 +226,55 @@ body {
 }
 
 .Content_Atype {
-  height: 60%;
-  display: block;
+  height: 55%;
+  display: none;
   justify-content: center;
 }
 .Content_Btype {
-  height: 75%;
+  height: 65%;
   display: none;
 }
 
 .Span_Tittle {
   display: flex;
   align-items: center;
-  width: 200px;
+  width: 100%;
   text-align: right;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #a4b3bb ;
   justify-content: left;
   margin-right: 8px;
-  padding: 16px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 17px;
+  color: #4e626d
 }
 
 #Btype_User_Age {
-  text-align: right;
+  text-align: left;
   border: 1px solid #ccc;
   height: 26px;
   line-height: 26px;
   border-radius: 4px;
   font-size: 10px;
-  width: 50%;
-  margin-left: 10px;
-  padding-right: 40px;
+  width: 100%;
+  line-height: 30px;
+  margin: 10px auto;
 }
 
 #Atype_User_Age {
-  text-align: right;
+  text-align: left;
   border: 1px solid #ccc;
   height: 26px;
   line-height: 26px;
   border-radius: 4px;
   font-size: 10px;
-  width: calc(100% -200px -10px);
-  margin-left: 10px;
-  padding-right: 40px;
+  width: 100%;
+  line-height: 30px;
+  margin: 10px auto;
 }
 
 .Input_Wrap {
-  height: 50px;
+  height: 25px;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
@@ -280,8 +282,7 @@ body {
   align-items: center;
   justify-items: center;
   position: relative;
-  width: calc(100% - 200px - 10px);
-  margin-left: 10px;
+  width: 100%;
 }
 .Input_Box_Content_Row {
   display: flex;
@@ -292,9 +293,7 @@ body {
 
 .radio_wrap {
   display: flex;
-  flex-grow: 1;
-  height: 50px;
-
+  height: 25px;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
@@ -302,8 +301,7 @@ body {
   align-items: center;
   justify-items: center;
   position: relative;
-  width: calc(100% - 200px - 10px);
-  margin-left: 10px;
+  width: 100%;
 }
 
 .form_radio_btn {
@@ -318,7 +316,7 @@ body {
 }
 .form_radio_btn label {
   display: block;
-  border-radius: 10px;
+  border-radius: 6px;
   margin: 10px auto;
   text-align: center;
   height: -webkit-fill-available;
@@ -365,7 +363,7 @@ body {
   visibility: visible;
   opacity: 1;
   /* padding: 8px; */
-  width: 40%;
+  width: 50%;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -456,7 +454,7 @@ body {
   height: 100%;
 }
 
-#Header_Logo {
+#Atype_Header_Logo {
   width: auto;
   height: 18px;
 }
@@ -550,22 +548,16 @@ body {
 }
 .Input_Box_Header {
   width: 100%;
-  color: white;
-  background-color: #408d86;
+  color: #26a69a;
+  background-color: #e0f2f1;
+  font-size: 18px;
   height: 30px;
   text-align: center;
+  font-weight: 600;
+  box-shadow: 1px 0px 4px inset #b0cbca;
 }
 
 /* Btype 모달 */
-.submit {
-  background-color: #80cbc4;
-  width: calc(100% - 32px);
-  border: transparent;
-  border-radius: 4px;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-}
 
 .B_Modal_Black_Bg {
   width: 100%;
@@ -588,7 +580,7 @@ body {
   visibility: visible;
   opacity: 1;
   /* padding: 8px; */
-  width: 40%;
+  width: 50%;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -723,6 +715,8 @@ body {
   display: flex;
   align-items: center;
   padding: 16px;
+  font-size: 12px;
+  color: var(--White_Color_1);
 }
 
 .B_Modal_Wrap_Up_Content_Value {
@@ -771,19 +765,64 @@ body {
   color: var(--Green_Color);
 }
 /* 공통 */
-.Span_Title_Explain{
-  font-size: 10px;
+.Span_Title_Explain {
+  font-size: 13px;
   opacity: 0.7;
-  color: var(--Blue_Color);
+  color: #4e626d;
   font-weight: 700;
 }
 
-.Span_Tittle_Explain{
+.Span_Tittle_Explain {
   font-size: 10px;
+  font-size: 13px;
   opacity: 0.7;
   color: var(--Blue_Color);
   font-weight: 700;
 }
-.Input_Box_Tittle{
-  width: 50%;
+.Input_Box_Tittle {
+  width: 100%;
+}
+
+#Modal {
+  background-color: #80cbc4;
+  width: calc(100% - 32px);
+  border-radius: 4px;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  margin: 0px 16px 0px 16px;
+  display: none;
+  box-shadow: 1px 0px 4px inset #718886;
+  border: transparent;
+}
+#B_Modal {
+  background-color: #80cbc4;
+  width: calc(100% - 32px);
+  border-radius: 2px;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  margin: 0px 16px 0px 16px;
+  display: none;
+  box-shadow: 1px 0px 4px inset #718886;
+  border: transparent;
+}
+.header{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: left;
+}
+.header_Logo{
+width: 5%;
+
+}
+.header_Tittle{
+width: 95%;
+display: flex;
+justify-content: center;
+color: var(--Gray_Color_2);
+font-weight: 600;
+align-items: center;
+ 
 }

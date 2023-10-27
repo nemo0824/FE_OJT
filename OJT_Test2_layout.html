@@ -28,13 +28,18 @@
 </head>
 
 <body>
-    <div class="header">header</div>
+    <div class="header">
+        <div class="header_Logo">
+            <img src="Cnt_logo_old_white.png">
+        </div>
+        <div class="header_Tittle">심방세동 알고리즘</div>
+    </div>
     <!-- Atype 모달-------------------------------------------------------------------- -->
     <div class="Modal_Black_Bg ">
         <div class="Modal_White_Bg">
             <div class="Modal_Header">
                 <div class="Modal_Header_Logo">
-                    <img src="./Cnt_logo_old_white.png" id="Header_Logo">
+                    <img src="./Cnt_logo_old_white.png" id="Atype_Header_Logo">
                 </div>
                 <div class="Modal_Header_Title"> Atype Result</div>
                 <div class="Modal_Header_Close">
@@ -52,7 +57,7 @@
                             <div class="Modal_Wrap_Up_Content_Value" id="Atype_Modal_Age"></div>
                         </div>
                         <div class="Modal_Wrap_Up_Content_Right">
-                            <div class="Modal_Wrap_Up_Content_Title">와피린 복용여부</div>
+                            <div class="Modal_Wrap_Up_Content_Title">와파린 복용여부</div>
                             <div class="Modal_Wrap_Up_Content_Value" id="Modal_Gender">Yes</div>
                         </div>
                     </div>
@@ -120,29 +125,29 @@
                             <div class="B_Modal_Wrap_Up_Content_Title">나이</div>
                             <div class="B_Modal_Wrap_Up_Content_Value" id="Btype_Modal_Age"></div>
                         </div>
-                        <div class="B_Modal_Wrap_Up_Content_Right">
-                            <div class="B_Modal_Wrap_Up_Content_Title">와피린 복용여부</div>
+                        <div class="B_Modal_Wrap_Up_Content_Left">
+                            <div class="B_Modal_Wrap_Up_Content_Title">와파린 복용여부</div>
                             <div class="B_Modal_Wrap_Up_Content_Value" id="Modal_Gender">No</div>
                         </div>
-                        <div class="B_Modal_Wrap_Up_Content_Left">
+                        <div class="B_Modal_Wrap_Up_Content_Right">
                             <div class="B_Modal_Wrap_Up_Content_Title">콩팥질환 </div>
                             <div class="B_Modal_Wrap_Up_Content_Value" id="Btype_Kidneys"> </div>
                         </div>
                     </div>
                     <div class="B_Modal_Wrap_Up_Wrap">
 
-                        <div class="B_Modal_Wrap_Up_Content_Right">
+                        <div class="B_Modal_Wrap_Up_Content_Left">
                             <div class="B_Modal_Wrap_Up_Content_Title">뇌졸증 과거력</div>
                             <div class="B_Modal_Wrap_Up_Content_Value" id="Btype_Stroke"> </div>
                         </div>
 
                         <div class="B_Modal_Wrap_Up_Content_Left">
-                            <div class="B_Modal_Wrap_Up_Content_Title">항혈전제, 소염진통제 복용</div>
+                            <div class="B_Modal_Wrap_Up_Content_Title">항혈전제<br>소염진통제 복용</div>
                             <div class="B_Modal_Wrap_Up_Content_Value" id="Btype_Painkiller"> </div>
                         </div>
 
                         <div class="B_Modal_Wrap_Up_Content_Right">
-                            <div class="B_Modal_Wrap_Up_Content_Title">조절되지 않는 높은 혈압</div>
+                            <div class="B_Modal_Wrap_Up_Content_Title">조절되지 않는 <br> 높은 혈압</div>
                             <div class="B_Modal_Wrap_Up_Content_Value" id="Btype_High_Blood"> </div>
                         </div>
                     </div>
@@ -151,11 +156,11 @@
                             <div class="B_Modal_Wrap_Up_Content_Title">간질환</div>
                             <div class="B_Modal_Wrap_Up_Content_Value" id="Btype_Liver"> </div>
                         </div>
-                        <div class="B_Modal_Wrap_Up_Content_Right">
+                        <div class="B_Modal_Wrap_Up_Content_Left">
                             <div class="B_Modal_Wrap_Up_Content_Title">출혈의 과거력</div>
                             <div class="B_Modal_Wrap_Up_Content_Value" id="Btype_Bleeding"> </div>
                         </div>
-                        <div class="B_Modal_Wrap_Up_Content_Left">
+                        <div class="B_Modal_Wrap_Up_Content_Right">
                             <div class="B_Modal_Wrap_Up_Content_Title">음주</div>
                             <div class="B_Modal_Wrap_Up_Content_Value" id="Btype_Drink"> </div>
                         </div>
@@ -170,7 +175,7 @@
                                 HAS-BLED 출혈 위험 점수 : 총 <span id="B_Danger_Score"></span><span class="unit">점</span>
                             </div>
                             <div>
-                                위험군 연간 출혈사건 발생 위험도 : <span id="B_Danger_Percent">23</span>
+                                위험군 연간 출혈사건 발생 위험도 : <span id="B_Danger_Percent"></span>
                                 <span class="unit">%</span>
                             </div>
                         </div>
@@ -193,7 +198,7 @@
                 <div class="Input_Box">
                     <div class="Input_Box_Content">
                         <div class="Input_Box_Tittle">
-                            <span class="Span_Tittle">심방 여부</span>
+                            <span class="Span_Tittle">1. 심방 여부</span>
                             <span class="Span_Title_Explain">심방세동을 진단받으셨습니까?</span>
                         </div>
                         <div class="radio_wrap">
@@ -210,12 +215,12 @@
                     </div>
                     <div class="Input_Box_Content">
                         <div class="Input_Box_Tittle">
-                            <span class="Span_Tittle">와피린 여부</span>
-                            <span class="Span_Title_Explain">와피린 복욕중입니까?</span>
+                            <span class="Span_Tittle">2. 와파린 여부</span>
+                            <span class="Span_Title_Explain">와파린 복욕중입니까?</span>
                         </div>
                         <div class="radio_wrap">
                             <div class="form_radio_btn radio_male">
-                                <input id="radio-3" type="radio" name="Warfarin" value="Yes" checked>
+                                <input id="radio-3" type="radio" name="Warfarin" value="Yes">
                                 <label for="radio-3">Yes</label>
                             </div>
 
@@ -236,7 +241,7 @@
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
                                     <span class="Span_Tittle">나이</span>
-                                    <span class="Span_Title_Explain">ㅇㅇ</span>
+                                    <span class="Span_Tittle_Explain">만 나이를 입력하세요</span>
                                 </div>
                                 <div class="Input_Wrap">
                                     <input id="Atype_User_Age" type="number" max="100" min="0" onchange="onchangeAge()">
@@ -248,18 +253,17 @@
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
                                     <span class="Span_Tittle">빈혈 유무 </span>
-                                    <span class="Span_Title_Explain">Hd < 13 g/dL(남), <12 g/dL(여)</span>
-                                </div>
-                                <div class="radio_wrap">
-                                    <div class="form_radio_btn radio_male">
-                                        <input id="radio-5" type="radio" name="Atype_anemia" value="Yes">
-                                        <label for="radio-5">Yes</label>
-                                    </div>
+                                    <span class="Span_Tittle_Explain">Hd < 13 g/dL(남), <12 g/dL(여) </span> </div> <div
+                                            class="radio_wrap">
+                                            <div class="form_radio_btn radio_male">
+                                                <input id="radio-5" type="radio" name="Atype_anemia" value="Yes">
+                                                <label for="radio-5">Yes</label>
+                                            </div>
 
-                                    <div class="form_radio_btn">
-                                        <input id="radio-6" type="radio" name="Atype_anemia" value="No">
-                                        <label for="radio-6">No</label>
-                                    </div>
+                                            <div class="form_radio_btn">
+                                                <input id="radio-6" type="radio" name="Atype_anemia" value="No">
+                                                <label for="radio-6">No</label>
+                                            </div>
                                 </div>
 
 
@@ -269,24 +273,23 @@
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
                                     <span class="Span_Tittle">콩팥질환 유무</span>
-                                    <span class="Span_Title_Explain">GFR < 30mL/min </span>
-                                </div>
-                                <div class="radio_wrap">
-                                    <div class="form_radio_btn radio_male">
-                                        <input id="radio-7" type="radio" name="Atype_kidneys" value="Yes">
-                                        <label for="radio-7">Yes</label>
-                                    </div>
+                                    <span class="Span_Tittle_Explain">GFR < 30mL/min </span> </div> <div
+                                            class="radio_wrap">
+                                            <div class="form_radio_btn radio_male">
+                                                <input id="radio-7" type="radio" name="Atype_kidneys" value="Yes">
+                                                <label for="radio-7">Yes</label>
+                                            </div>
 
-                                    <div class="form_radio_btn">
-                                        <input id="radio-8" type="radio" name="Atype_kidneys" value="No">
-                                        <label for="radio-8">No</label>
-                                    </div>
+                                            <div class="form_radio_btn">
+                                                <input id="radio-8" type="radio" name="Atype_kidneys" value="No">
+                                                <label for="radio-8">No</label>
+                                            </div>
                                 </div>
                             </div>
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
                                     <span class="Span_Tittle">출혈의 과거력</span>
-                                    <span class="Span_Title_Explain">뇌출혈, 위장출혈</span>
+                                    <span class="Span_Tittle_Explain">뇌출혈, 위장출혈</span>
                                 </div>
                                 <div class="radio_wrap">
                                     <div class="form_radio_btn radio_male">
@@ -305,7 +308,7 @@
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
                                     <span class="Span_Tittle">고혈압 유무</span>
-                                    <span class="Span_Title_Explain">ㅇㅇ</span>
+                                    <span class="Span_Tittle_Explain">현재 고혈압 유무</span>
                                 </div>
                                 <div class="radio_wrap">
                                     <div class="form_radio_btn radio_male">
@@ -336,17 +339,18 @@
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
                                     <span class="Span_Tittle">나이</span>
-                                    <span class="Span_Tittle_Explain">ss</span>
+                                    <span class="Span_Tittle_Explain">만 나이를 입력하세요</span>
                                 </div>
                                 <div class="Input_Wrap">
-                                    <input id="Btype_User_Age" type="number" max="100" min="0" onchange="onchangeBtypeAge()">
+                                    <input id="Btype_User_Age" type="number" max="100" min="0"
+                                        onchange="onchangeBtypeAge()">
                                     <!-- <p id="setAgeMessage"></p> -->
                                     <span class="unit_Age"></span>
                                 </div>
                             </div>
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
-                                    <span class="Span_Tittle">고혈압 유무</span>
+                                    <span class="Span_Tittle">조절되지 않는 높은 혈압</span>
                                     <span class="Span_Tittle_Explain">수축혈압 160mmHg 이상</span>
                                 </div>
                                 <div class="radio_wrap">
@@ -384,7 +388,8 @@
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
                                     <span class="Span_Tittle">간질환</span>
-                                    <span class="Span_Tittle_Explain">간경변 진단 혹은 총 빌리루빈 2.4mg/dL & AST/ALT/AP 정상치 3배이상</span>
+                                    <span class="Span_Tittle_Explain">간경변 진단 혹은 총 빌리루빈 2.4mg/dL & AST/ALT/AP 정상치
+                                        3배이상</span>
                                 </div>
                                 <div class="radio_wrap">
                                     <div class="form_radio_btn radio_male">
@@ -404,7 +409,7 @@
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
                                     <span class="Span_Tittle">뇌졸증 과거력</span>
-                                    <span class="Span_Tittle_Explain">dd</span>
+                                    <span class="Span_Tittle_Explain">1회라도 있을시 </span>
                                 </div>
                                 <div class="radio_wrap">
                                     <div class="form_radio_btn radio_male">
@@ -481,9 +486,9 @@
 
 
 
-                        <button class="submit" id="B_Modal">제출</button>
-                    </div>
 
+                    </div>
+                    <button class="submit" id="B_Modal">제출</button>
                 </div>
             </div>
 
@@ -509,6 +514,7 @@
             if (this.checked) {
                 document.getElementsByClassName('Content_Atype')[0].style.display = "block";
                 document.getElementsByClassName('Content_Btype')[0].style.display = "none";
+                document.getElementById('Modal').style.display = "block"
             }
         });
         // Warfain = No -> Btype 
@@ -516,6 +522,7 @@
             if (this.checked) {
                 document.getElementsByClassName('Content_Atype')[0].style.display = "none";
                 document.getElementsByClassName('Content_Btype')[0].style.display = "block";
+                document.getElementById('B_Modal').style.display = "block"
             }
         });
         // AType 모달 ----------------------------------------------------------------
@@ -678,7 +685,7 @@
                 Danger_Percent.innerHTML = "8.7";
                 Danger_Score.classList.add('Atype_Result_Orange');
                 Danger_Percent.classList.add('Atype_Result_Orange');
-            } else if (Score <= 5) {
+            } else if (Score >= 5) {
                 Danger_Score.innerHTML = Score;
                 Danger_Percent.innerHTML = "10";
                 Danger_Score.classList.add('Atype_Result_Red');
@@ -750,6 +757,32 @@
                 document.getElementById('Btype_Bleeding').innerHTML = Btype_Bleeding_Value
             })
         })
+        // Atype일떄
+        let warfarinAtype = document.getElementById('radio-3').checked
+
+        //Btype 일떄 
+        let warfarinBtype = document.getElementById('radio-4').checked
+
+
+
+
+        let AtypeAgeInput = document.getElementById('Atype_User_Age');
+
+        //  Atype 나이에 입력값이 있을떄 
+        let isAgeNotEmpty = !AtypeAgeInput.value == "";
+
+        // Atype 빈혈
+        let anemiaYes = documnet.getElementById('radio-5').checked;
+        let anemiaNo = document.getElementById('radio-6').checked;
+        
+       
+
+
+        // if (warfarinAtype == true) {
+
+        // } else if (warfarinBtype == true) {
+            
+        // }
     </script>
 </body>
 
