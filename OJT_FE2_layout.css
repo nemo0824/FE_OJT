@@ -165,7 +165,7 @@ body {
   height: 50px;
   /* border: 3px solid blue; */
   background-color: #e0f2f1;
-  border-bottom: 5px solid white;
+  border-bottom: 3px solid white;
 }
 .wrap {
   width: 100%;
@@ -177,7 +177,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 50px);
   min-width: 1200px;
 }
 
@@ -194,14 +194,14 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   width: 50%;
-  padding: 16px;
+  padding: 32px;
 }
 .Input_Box_Atype {
   border-radius: 2px;
   box-shadow: 1px 0px 4px inset #b0cbca;
   background: #d0ebea;
   width: calc(100% - 32px);
-  height: 100%;
+  height: calc(100% - 50px -  32px - 16px);
   margin: 16px 16px 16px 16px;
 }
 
@@ -210,7 +210,7 @@ body {
   box-shadow: 1px 0px 4px inset #b0cbca;
   background: #d0ebea;
   width: calc(100% - 32px);
-  height: 100%;
+  height: calc( 100% - 50px - 16px - 32px);
   margin: 16px 16px 16px 16px;
 }
 
@@ -221,17 +221,17 @@ body {
   /* overflow: hidden; */
   width: calc(100% -32px);
   margin: 16px 16px 0px 16px;
-  height: 20%;
   display: flex;
+  height: 180px;
 }
 
 .Content_Atype {
-  height: 55%;
+  height: calc(100% - 50px - 32px);
   display: none;
   justify-content: center;
 }
 .Content_Btype {
-  height: 65%;
+  height: calc(100% - 180px);
   display: none;
 }
 
@@ -339,6 +339,7 @@ body {
 .form_radio_btn input[type="radio"] + label {
   background: #f9fafc;
   color: #666;
+  font-size: 13px;
 }
 
 /* Modal Atype */
@@ -510,6 +511,7 @@ body {
   display: flex;
   align-items: center;
   padding: 16px;
+  color: var(--Gray_Color_2);
 }
 
 .Modal_tip {
@@ -555,6 +557,7 @@ body {
   text-align: center;
   font-weight: 600;
   box-shadow: 1px 0px 4px inset #b0cbca;
+  font-size: 16px;
 }
 
 /* Btype 모달 */
@@ -728,6 +731,7 @@ body {
   display: flex;
   align-items: center;
   padding: 16px;
+  color: var(--Gray_Color_2);
 }
 
 .B_Modal_tip {
@@ -786,35 +790,37 @@ body {
 #Modal {
   background-color: #80cbc4;
   width: calc(100% - 32px);
-  border-radius: 4px;
-  height: 10%;
+  border-radius: 2px;
+  height: 50px;
   display: flex;
   justify-content: center;
-  margin: 0px 16px 0px 16px;
+  margin: 0px 16px 10px 16px;
   display: none;
-  box-shadow: 1px 0px 4px inset #718886;
+  box-shadow: 2px 2px 4px #3d4e4c;
   border: transparent;
 }
 #B_Modal {
   background-color: #80cbc4;
   width: calc(100% - 32px);
   border-radius: 2px;
-  height: 10%;
+  height: 50px;
   display: flex;
   justify-content: center;
   margin: 0px 16px 0px 16px;
   display: none;
-  box-shadow: 1px 0px 4px inset #718886;
+  box-shadow: 2px 2px 4px #3d4e4c;
   border: transparent;
 }
 .header{
   display: flex;
   width: 100%;
   height: 50px;
-  justify-content: left;
+  justify-content: center;
+  align-items: center;
 }
 .header_Logo{
-width: 5%;
+width: 50px;
+height: 18px;
 
 }
 .header_Tittle{
@@ -826,3 +832,30 @@ font-weight: 600;
 align-items: center;
  
 }
+.ForScroll{
+  overflow-y: scroll;
+  height: calc(100% - 30px);
+}
+
+#Modal_Close{
+ background-color: #43A49B;
+ border: transparent;
+ color: white;
+ width: 100px;
+ height: 40px;
+ border-radius: 3px;
+}
+
+#B_Modal_Close{
+  background-color: #43A49B;
+  border: transparent;
+  color: white;
+  width: 100px;
+ height: 40px;
+ border-radius: 3px;
+
+}
+/* 스크롤 */
+::-webkit-scrollbar{width: 8px;}
+::-webkit-scrollbar-track{background-color: #D0EBEA;}
+::-webkit-scrollbar-thumb{background-color: #408d86; border-radius: 10px;}
