@@ -1,24 +1,35 @@
-<div *ngIf="hero">
+<div *ngIf="hero" class="Detial_Hero">
 
-    
-   
-    <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-subtitle>{{hero.name | uppercase}} Details</mat-card-subtitle>
-          <mat-card-title><span>id: </span>{{hero.id}}</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            <label for="hero-name">Hero name: </label>
-            <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
-          <mat-divider></mat-divider>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-        <mat-card-footer>
-          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-        </mat-card-footer>
-      </mat-card>
-  
-  </div>
+
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-subtitle>{{hero.name | uppercase}} Details</mat-card-subtitle>
+      <mat-card-title><span>id: </span>{{hero.id}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="Card_Content">
+      
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter New Hero Name</mat-label>
+          <input matInput #newNameInput id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <!-- <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+      </p>
+      <label for="hero-name">{{hero.name | uppercase}}</label>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <section>
+        <div class="example-button-row">
+          <button class="Change_Btn" (click)="updateHeroName(newNameInput.value)">Change Name</button>
+        </div>
+      </section>
+    </mat-card-actions>
+    <mat-card-footer>
+
+    </mat-card-footer>
+  </mat-card>
+
+</div>

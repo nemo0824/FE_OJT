@@ -15,33 +15,36 @@
     cursor: pointer;
     position: relative;
     left: 0;
-    background-color: #EEE;
+    background-color: white;
     margin: .5em;
     padding: 0;
     border-radius: 4px;
     display: flex;
     align-items: stretch;
     height: 1.8em;
+    box-shadow: 0.1px 0.2px 0.3px inset;
+    border-color: transparent;
+   
   }
   
   .heroes button:hover {
     color: #2c3a41;
-    background-color: #e6e6e6;
+    background-color: #ffcddf;
     left: .1em;
   }
   
   .heroes button:active {
-    background-color: #525252;
+    background-color: #ffcddf;
     color: #fafafa;
   }
   
   .heroes button.selected {
-    background-color: black;
+    background-color: #ffcddf;
     color: white;
   }
   
   .heroes button.selected:hover {
-    background-color: #505050;
+    background-color: #ff607e;
     color: white;
   }
   
@@ -55,12 +58,48 @@
     font-size: small;
     color: white;
     padding: 0.8em 0.7em 0 0.7em;
-    background-color: #405061;
+    background-color: #EE1D52;
     line-height: 1em;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
+    
   }
   
   .heroes .name {
     align-self: center;
+  }
+  .heroes-wrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    
+  }
+  .Heroes_Btn{
+    background-color: #ededed;
+    
+  }
+  .vice_Tittle{
+    text-align: center;
+    background-color: #c4c4c4;
+    font-size: 20px;
+    font-weight: 600;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+  }
+  .vice_Tittle_Content{
+    justify-content: center;
+    
+    
+  }
+  .Box_Wrap{
+  
+   width: 700px;
+   height: 600px;
+   border: 2px solid #c4c4c4;
+   margin-top: 32px;
+   border-radius: 4px;
+   background-color : #F7F7F7;
   }

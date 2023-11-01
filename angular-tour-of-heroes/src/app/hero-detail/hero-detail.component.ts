@@ -8,4 +8,10 @@ import { Hero } from '../hero';
 })
 export class HeroDetailComponent {
   @Input() hero?: Hero;
+
+  updateHeroName(newName: string): void {
+    if (this.hero) {
+      this.hero.name = newName;
+    }
+  }
 }
