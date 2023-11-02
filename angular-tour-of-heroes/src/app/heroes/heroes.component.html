@@ -1,11 +1,3 @@
-<div class="Box_Wrap"> 
-<div class="vice_Tittle">
-  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-  <div class="vice_Tittle_Content">Change your Hero's Name</div>
-  <div>X</div>
-</div>
-
-<div class="heroes-wrap">
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)" class="Heroes_Btn">
@@ -13,8 +5,11 @@
       <span class="name">{{hero.name}}</span>
     </button>
   </li>
+  
 </ul>
-
 <app-hero-detail [hero]="selectedHero"></app-hero-detail>
-</div>
-</div>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+
+
+
+

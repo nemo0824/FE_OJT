@@ -1,0 +1,68 @@
+<mat-drawer-container class="example-container" autosize>
+  <app-hero-toolbar></app-hero-toolbar>
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Change your Hero's Name</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <ul class="heroes">
+      <li *ngFor="let hero of heroes">
+        <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)" class="Heroes_Btn">
+          <span class="badge">{{hero.id}}</span>
+          <span class="name">{{hero.name}}</span>
+        </button>
+      </li>
+
+    </ul>
+
+
+
+  </mat-drawer>
+
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      WelCome Choose your Hero
+    </button>
+<div *ngIf="selectedHero">test</div>
+<div>another test</div>
+
+    <div *ngIf="selectedHero"class="Detial_Hero">
+
+
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-subtitle>{{selectedHero.name | uppercase}} Details</mat-card-subtitle>
+          <mat-card-title><span>id: </span>{{selectedHero.id}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="Card_Content">
+
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Enter New Hero Name</mat-label>
+              <input matInput #newNameInput id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+             
+            </mat-form-field>
+          </p>
+          <label for="hero-name">{{selectedHero.name | uppercase}}</label>
+          <mat-divider></mat-divider>
+        </mat-card-content>
+        <mat-card-actions>
+          <section>
+            <div class="example-button-row">
+              <button class="Change_Btn" (click)="updateHeroName(newNameInput.value)">Change Name</button>
+            </div>
+          </section>
+        </mat-card-actions>
+        <mat-card-footer>
+
+        </mat-card-footer>
+      </mat-card>
+
+    </div>
+
+
+  </div>
+
+</mat-drawer-container>

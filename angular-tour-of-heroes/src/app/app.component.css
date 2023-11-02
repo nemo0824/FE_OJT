@@ -1,8 +1,5 @@
-.Hero_Wrap{
-    height: calc(100% - 50px);
-    width: 100%;
+.Content_Wrap{
     display: flex;
     justify-content: center;
-    background-color: #ededed;
-
+    align-items: center;
 }

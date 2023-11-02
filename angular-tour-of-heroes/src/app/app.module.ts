@@ -9,12 +9,13 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroToolbarComponent } from './hero-toolbar/hero-toolbar.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 
@@ -24,6 +25,8 @@ import { HeroToolbarComponent } from './hero-toolbar/hero-toolbar.component';
     HeroesComponent,
     HeroDetailComponent,
     HeroToolbarComponent,
+    SidenavComponent,
+    
    
     
   ],
@@ -37,10 +40,13 @@ import { HeroToolbarComponent } from './hero-toolbar/hero-toolbar.component';
     MatIconModule,
     MatSidenavModule ,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

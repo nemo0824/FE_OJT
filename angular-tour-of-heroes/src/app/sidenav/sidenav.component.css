@@ -1,0 +1,187 @@
+.example-container {
+    width: 1000px;
+    height: 600px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+  /* HeroesComponent's private CSS styles */
+.heroes {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+
+.heroes li {
+  display: flex;
+}
+
+.heroes button {
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: white;
+  margin: .5em;
+  padding: 0;
+  border-radius: 4px;
+  display: flex;
+  align-items: stretch;
+  height: 1.8em;
+  box-shadow: 0.1px 0.2px 0.3px inset;
+  border-color: transparent;
+ 
+}
+
+.heroes button:hover {
+  color: #2c3a41;
+  background-color: #ffcddf;
+  left: .1em;
+}
+
+.heroes button:active {
+  background-color: #ffcddf;
+  color: #fafafa;
+}
+
+.heroes button.selected {
+  background-color: #ffcddf;
+  color: white;
+}
+
+.heroes button.selected:hover {
+  background-color: #ff607e;
+  color: white;
+}
+
+.heroes button.selected:active {
+  background-color: black;
+  color: white;
+}
+
+.heroes .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #EE1D52;
+  line-height: 1em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+  
+}
+
+.heroes .name {
+  align-self: center;
+}
+.heroes-wrap{
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  
+}
+.Heroes_Btn{
+  background-color: #ededed;
+  
+}
+.vice_Tittle{
+  text-align: center;
+  background-color: #c4c4c4;
+  font-size: 20px;
+  font-weight: 600;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+}
+.vice_Tittle_Content{
+  justify-content: center;
+  
+  
+}
+.Box_Wrap{
+
+ width: 700px;
+ height: 600px;
+ border: 2px solid #c4c4c4;
+ margin-top: 32px;
+ border-radius: 4px;
+ background-color : #F7F7F7;
+}
+.example-spacer {
+  flex: 1 1 auto;
+  background-color: #c4c4c4;
+}
+
+
+.Detial_Hero{
+  margin-left: 32px;
+}
+
+
+/* button */
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+button:hover {
+  background-color: pink;
+  color: white;
+}
+
+.mat-mdc-card {
+  position: relative;
+  margin: 0.5em;
+}
+
+.Change_Btn {
+  background-color: #916400;
+  color: #FFC107;
+}
+.Change_Btn:hover{
+  background-color: #FFC107;
+  color:  #916400;
+}
+.Card_Content{
+  margin-top: 8px;
+}
+
