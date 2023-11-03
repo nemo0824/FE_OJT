@@ -164,7 +164,7 @@ body {
 .header {
   height: 50px;
   /* border: 3px solid blue; */
-  background-color: #e0f2f1;
+  background-color: #26a69a;
   border-bottom: 3px solid white;
 }
 .wrap {
@@ -194,7 +194,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   width: 50%;
-  padding: 32px;
+  padding: 16px;
 }
 .Input_Box_Atype {
   border-radius: 2px;
@@ -226,7 +226,7 @@ body {
 }
 
 .Content_Atype {
-  height: calc(100% - 50px - 32px);
+  height: calc(100% - 180px);
   display: none;
   justify-content: center;
 }
@@ -384,7 +384,7 @@ body {
 .Modal_Header {
   width: 100%;
   height: 50px;
-  background-color: #408d86;
+  background-color: #26a69a;
   display: flex;
   align-items: center;
   padding: 16px;
@@ -470,7 +470,7 @@ body {
   border-radius: 4px;
   height: 50px;
   margin-top: 16px;
-  background-color: #43a49b;
+  background-color: #26a69a;
   display: flex;
   align-items: center;
   padding: 16px;
@@ -478,7 +478,7 @@ body {
 
 .Modal_Wrap_Down_Content_Value {
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0px 4px 4px 0px;
   height: 200px;
   background-color: var(--White_Color_2);
   display: flex;
@@ -492,10 +492,10 @@ body {
 } */
 .Modal_Wrap_Up_Content_Title {
   width: 40%;
-  border-radius: 4px;
+  border-radius: 4px 0px 0px 4px;
   height: 50px;
   margin-top: 16px;
-  background-color: #43a49b;
+  background-color: #26a69a;
   display: flex;
   align-items: center;
   padding: 16px;
@@ -504,7 +504,7 @@ body {
 
 .Modal_Wrap_Up_Content_Value {
   width: 60%;
-  border-radius: 4px;
+  border-radius: 0px 4px 4px 0px;
   height: 50px;
   margin-top: 16px;
   background-color: var(--White_Color_2);
@@ -512,12 +512,13 @@ body {
   align-items: center;
   padding: 16px;
   color: var(--Gray_Color_2);
+  font-weight: 600;
 }
 
 .Modal_tip {
   font-size: 13px;
   opacity: 0.7;
-  color: var(--Red_Color);
+  color: var(--Black_Color_1);
   font-weight: 700;
   border-bottom: 1px solid #808080;
   height: 30px;
@@ -550,14 +551,15 @@ body {
 }
 .Input_Box_Header {
   width: 100%;
-  color: #26a69a;
-  background-color: #e0f2f1;
+  color: var(--White_Color_1);
+  background-color: #26a69a;
   font-size: 18px;
   height: 30px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 800;
   box-shadow: 1px 0px 4px inset #b0cbca;
   font-size: 16px;
+  
 }
 
 /* Btype 모달 */
@@ -603,7 +605,7 @@ body {
 .B_Modal_Header {
   width: 100%;
   height: 50px;
-  background-color: #408d86;
+  background-color: #26a69a;
   display: flex;
   align-items: center;
   padding: 16px;
@@ -697,7 +699,7 @@ body {
 
 .B_Modal_Wrap_Down_Content_Value {
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0px 4px 4px 0px;
   height: 200px;
   background-color: var(--White_Color_2);
   display: flex;
@@ -711,7 +713,7 @@ body {
 } */
 .B_Modal_Wrap_Up_Content_Title {
   width: 40%;
-  border-radius: 4px;
+  border-radius: 4px 0px 0px 4px;
   height: 50px;
   margin-top: 16px;
   background-color: #26a69a;
@@ -724,7 +726,7 @@ body {
 
 .B_Modal_Wrap_Up_Content_Value {
   width: 60%;
-  border-radius: 4px;
+  border-radius: 0px 4px 4px 0px;
   height: 50px;
   margin-top: 16px;
   background-color: var(--White_Color_2);
@@ -732,12 +734,13 @@ body {
   align-items: center;
   padding: 16px;
   color: var(--Gray_Color_2);
+  font-weight: 600;
 }
 
 .B_Modal_tip {
   font-size: 13px;
   opacity: 0.7;
-  color: var(--Red_Color);
+  color: var(--Black_Color_1);
   font-weight: 700;
   border-bottom: 1px solid #808080;
   height: 30px;
@@ -780,7 +783,7 @@ body {
   font-size: 10px;
   font-size: 13px;
   opacity: 0.7;
-  color: var(--Blue_Color);
+  color: #4e626d;
   font-weight: 700;
 }
 .Input_Box_Tittle {
@@ -796,8 +799,10 @@ body {
   justify-content: center;
   margin: 0px 16px 10px 16px;
   display: none;
-  box-shadow: 2px 2px 4px #3d4e4c;
+  /* box-shadow: 2px 2px 4px #3d4e4c; */
   border: transparent;
+  color: var(--White_Color_1);
+  font-weight: 800;
 }
 #B_Modal {
   background-color: #80cbc4;
@@ -808,8 +813,18 @@ body {
   justify-content: center;
   margin: 0px 16px 0px 16px;
   display: none;
-  box-shadow: 2px 2px 4px #3d4e4c;
+  /* box-shadow: 2px 2px 4px #3d4e4c; */
   border: transparent;
+  color: var(--White_Color_1);
+  font-weight: 800;
+}
+
+#B_Modal:hover{
+  background-color: #26a69a;
+}
+
+#Modal:hover{
+  background-color: #26a69a;
 }
 .header{
   display: flex;
@@ -827,9 +842,10 @@ height: 18px;
 width: 95%;
 display: flex;
 justify-content: center;
-color: var(--Gray_Color_2);
+color: var(--White_Color_1);
 font-weight: 600;
 align-items: center;
+
  
 }
 .ForScroll{
@@ -838,7 +854,7 @@ align-items: center;
 }
 
 #Modal_Close{
- background-color: #43A49B;
+ background-color: #80cbc4;
  border: transparent;
  color: white;
  width: 100px;
@@ -847,13 +863,20 @@ align-items: center;
 }
 
 #B_Modal_Close{
-  background-color: #43A49B;
+  background-color: #80cbc4;
   border: transparent;
   color: white;
   width: 100px;
  height: 40px;
  border-radius: 3px;
 
+}
+
+#B_Modal_Close:hover{
+  background-color: #26a69a;
+}
+#Modal_Close:hover{
+  background-color: #26a69a;
 }
 /* 스크롤 */
 ::-webkit-scrollbar{width: 8px;}

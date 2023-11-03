@@ -53,7 +53,7 @@
 					<div class="Modal_Header_Close">
 						<span class="material-icons-outlined" style="color: white;">
 							close
-							</span>
+						</span>
 					</div>
 				</div>
 				<div class="Modal_Wrap">
@@ -87,9 +87,9 @@
 							<div class="Modal_Wrap_Down_Content_Value">몇점</div>
 						</div>
 					</div>
-						<div class="Modal_Wrap_Down1">
-							<button id="Modal_Close"> 닫기 </button>
-						</div>
+					<div class="Modal_Wrap_Down1">
+						<button id="Modal_Close"> 닫기 </button>
+					</div>
 				</div>
 
 			</div>
@@ -99,12 +99,16 @@
 		<div class="Main_Panel">
 
 			<div id="test23">
+				<div class="Main_Tittle">응급환자 응급도 판별 알고리즘</div>
 				<div id="test5">
+					
+					
+					
 					<div id="test2">
 						<div class="Main_Panel_InputBox_left_First">
 							<div class="Main_Panel_Input">
 								<span class="title">나이</span>
-								<input id="User_Age" type="number" placeholder="0~100 까지 입력 " onchange="onChangeAge()">
+								<input id="User_Age" type="number" class="Main_Panel_Input_Age placeholder="0~100 까지 입력 " onchange="onChangeAge()">
 								<p class="tip">*기본 정보</p>
 								<p id="setAgeMessage"></p>
 								<span class="unit_Age">세</span>
@@ -128,7 +132,8 @@
 							</div>
 							<div class="Main_Panel_Input">
 								<span class="title">발병일</span>
-								<input type="datetime-local" id="Disease_Date" class="Main_Panel_Input_DateInput" onchange="onchangeDate()">
+								<input type="datetime-local" id="Disease_Date" class="Main_Panel_Input_DateInput"
+									onchange="onchangeDate()">
 							</div>
 							<div class="Main_Panel_Input">
 								<span class="title">내원일</span>
@@ -207,20 +212,23 @@
 							<div class="Main_Panel_Input">
 								<!-- <p class="tip">*활력 징후 </p> -->
 								<span class="title">수축기 혈압</span>
-								<input id="User_Shrink" type="number" placeholder="0~ 300 까지 입력" onchange="onChangeShrink()">
+								<input id="User_Shrink" type="number" class="Main_Panel_Input_Element placeholder="0~ 300 까지 입력"
+									onchange="onChangeShrink()">
 								<p id="setShrinkMessage"> </p>
 								<span class="unit">mmHg</span>
 							</div>
 
 							<div class="Main_Panel_Input">
 								<span class="title">이완기 혈압</span>
-								<input id="User_Relaxation" type="number" placeholder="0~ 300 까지 입력" onchange="onChangeRelaxation()">
+								<input id="User_Relaxation" type="number" class="Main_Panel_Input_Element placeholder="0~ 300 까지 입력"
+									onchange="onChangeRelaxation()">
 								<p id="setRelaxationMessage"> </p>
 								<span class="unit">mmHg</span>
 							</div>
 							<div class="Main_Panel_Input">
 								<span class="title">맥박수</span>
-								<input id="User_Pulse" type="number" placeholder="0~ 300 까지 입력" onchange="onChangePulse()">
+								<input id="User_Pulse" type="number" class="Main_Panel_Input_Element placeholder="0~ 300 까지 입력"
+									onchange="onChangePulse()">
 								<p id="setPulseMessage"></p>
 								<span class="unit">bpm</span>
 							</div>
@@ -231,19 +239,22 @@
 						<div class="Main_Panel_InputBox_Right_Second">
 							<div class="Main_Panel_Input">
 								<span class="title">호흡수</span>
-								<input id="User_Breath" type="number" placeholder="0~ 60 까지 입력" onchange="onChangeBreath()">
+								<input id="User_Breath" type="number" class="Main_Panel_Input_Element  placeholder="0~ 60 까지 입력"
+									onchange="onChangeBreath()">
 								<p id="setBreathMessage"></p>
 								<span class="unit">bpm</span>
 							</div>
 							<div class="Main_Panel_Input">
 								<span class="title">산소포화도</span>
-								<input id="User_Oxygen" type="number" placeholder="0~ 100 까지 입력" onchange="onChangeOxygen()">
+								<input id="User_Oxygen" type="number"  class="Main_Panel_Input_Element placeholder="0~ 100 까지 입력"
+									onchange="onChangeOxygen()">
 								<p id="setOxygenMessage"></p>
 								<span class="unit">%</span>
 							</div>
 							<div class="Main_Panel_Input">
 								<span class="title">체온</span>
-								<input id="User_Temperature" type="number" placeholder="0~ 45 까지 입력" onchange="onChangeTemperature()">
+								<input id="User_Temperature"  type="number"  class="Main_Panel_Input_Element placeholder="0~ 45 까지 입력"
+									onchange="onChangeTemperature()">
 								<p id="setTemperatureMessage"></p>
 								<span class="unit">°C</span>
 							</div>
@@ -253,19 +264,20 @@
 						<div class="Main_Panel_InputBox_Right_Third">
 							<div class="Main_Panel_Input">
 								<span class="title">의식상태</span>
-								<input type="number" id="User_Consciousness" min="0" max="3" value="0"
+								<input type="number" class="Main_Panel_Input_Element" id="User_Consciousness" min="0" max="3" value="0"
 									onchange="onChangeConsciousness()">
-								
+
 
 
 							</div>
-							<div class="Main_Panel_Input">
+							<div class="Main_Panel_Input1">
 								<p id="Consciousness_Message"></p>
 							</div>
 
 							<div class="Main_Panel_Input">
 								<span class="title"></span>
-								<input id="User_Consciousness_Range" type="range" min="0" max="3" value="0" onchange="onChangeConsciousness_Range()">
+								<input class="Main_Panel_Input_Range" id="User_Consciousness_Range" type="range" min="0" max="3" value="0"
+									onchange="onChangeConsciousness_Range()">
 							</div>
 
 
@@ -276,7 +288,7 @@
 					</div>
 				</div>
 				<div id="test4">
-					<button id="Modal" class="SummitBtn" >제출</button>
+					<button id="Modal" class="SummitBtn">제출</button>
 				</div>
 			</div>
 
@@ -310,7 +322,7 @@
 		let isHospital = false;
 
 
-	
+
 		// 유효성검사 
 		const onChangeAge = (e) => {
 			const currentAge = document.getElementById('User_Age').value;
@@ -333,7 +345,7 @@
 			}
 
 		}
-		
+
 
 
 		const onChangeShrink = (e) => {
@@ -475,53 +487,59 @@
 		document.getElementById('Consciousness_Message').classList.add('Range_Message_Color_0')
 		// 의식상태 JS
 		const onChangeConsciousness = (e) => {
+  const currentConsciousness = document.getElementById('User_Consciousness').value;
+  const Consciousness_Message = document.getElementById('Consciousness_Message');
+  const Consciousness_Range = document.getElementById('User_Consciousness_Range');
 
-			const currentConsciousness = document.getElementById('User_Consciousness').value;
+  // 다시 선택시 Range 색 초기화
+  Consciousness_Range.classList.remove('Range_Color_0');
+  Consciousness_Range.classList.remove('Range_Color_1');
+  Consciousness_Range.classList.remove('Range_Color_2');
+  Consciousness_Range.classList.remove('Range_Color_3');
 
-			const Consciousness_Message = document.getElementById('Consciousness_Message');
+  // 다시 선택시 Message 색 초기화
+  Consciousness_Message.classList.remove('Range_Message_Color_0');
+  Consciousness_Message.classList.remove('Range_Message_Color_1');
+  Consciousness_Message.classList.remove('Range_Message_Color_2');
+  Consciousness_Message.classList.remove('Range_Message_Color_3');
 
-			const Consciousness_Range = document.getElementById('User_Consciousness_Range');
-			// 다시 선택시 Range 색 초기화 
-			Consciousness_Range.classList.remove('Range_Color_0')
-			Consciousness_Range.classList.remove('Range_Color_1')
-			Consciousness_Range.classList.remove('Range_Color_2')
-			Consciousness_Range.classList.remove('Range_Color_3')
-			// 다시 선택시 Message 색 초기화
-			Consciousness_Message.classList.remove('Range_Message_Color_0')
-			Consciousness_Message.classList.remove('Range_Message_Color_1')
-			Consciousness_Message.classList.remove('Range_Message_Color_2')
-			Consciousness_Message.classList.remove('Range_Message_Color_3')
-			if (currentConsciousness == "0") {
-				Consciousness_Message.innerHTML = "명료";
-				Consciousness_Range.value = "0";
-				Consciousness_Range.classList.add('Range_Color_0')
-				Consciousness_Message.classList.add('Range_Message_Color_0')
-				isConsciousness = true;
-			} else if (currentConsciousness == "1") {
-				Consciousness_Message.innerHTML = "소리에 반응";
-				Consciousness_Range.value = "1";
-				Consciousness_Range.classList.add('Range_Color_1')
-				Consciousness_Message.classList.add('Range_Message_Color_1')
-				isConsciousness = true;
-			} else if (currentConsciousness == "2") {
-				Consciousness_Message.innerHTML = "통증에 반응";
-				Consciousness_Range.value = "2";
-				Consciousness_Range.classList.add('Range_Color_2')
-				Consciousness_Message.classList.add('Range_Message_Color_2')
-				isConsciousness = true;
-			} else if (currentConsciousness == "3") {
-				Consciousness_Message.innerHTML = "무반응";
-				Consciousness_Range.value = "3";
-				Consciousness_Range.classList.add('Range_Color_3')
-				Consciousness_Message.classList.add('Range_Message_Color_3')
-				isConsciousness = true;
-			} else {
-				Consciousness_Message.innerHTML = "잘못된 입력 값 입니다";
-				Consciousness_Message.classList.add('Range_Message_Color_3')
-				Consciousness_Range.classList.add('Range_Color_3')
-				isConsciousness = false;
-			}
-		}
+  if (currentConsciousness == "0") {
+    Consciousness_Message.innerHTML = "명료";
+    Consciousness_Range.value = "0";
+    Consciousness_Range.max = "3"; // 수정: max 값을 조정
+    Consciousness_Range.classList.add('Range_Color_0');
+    Consciousness_Message.classList.add('Range_Message_Color_0');
+    isConsciousness = true;
+  } else if (currentConsciousness == "1") {
+    Consciousness_Message.innerHTML = "소리에 반응";
+    Consciousness_Range.value = "1";
+    Consciousness_Range.max = "3"; // 수정: max 값을 조정
+    Consciousness_Range.classList.add('Range_Color_1');
+    Consciousness_Message.classList.add('Range_Message_Color_1');
+    isConsciousness = true;
+  } else if (currentConsciousness == "2") {
+    Consciousness_Message.innerHTML = "통증에 반응";
+    Consciousness_Range.value = "2";
+    Consciousness_Range.max = "3"; // 수정: max 값을 조정
+    Consciousness_Range.classList.add('Range_Color_2');
+    Consciousness_Message.classList.add('Range_Message_Color_2');
+    isConsciousness = true;
+  } else if (currentConsciousness == "3") {
+    Consciousness_Message.innerHTML = "무반응";
+    Consciousness_Range.value = "3";
+    Consciousness_Range.max = "3"; // 수정: max 값을 조정
+    Consciousness_Range.classList.add('Range_Color_3');
+    Consciousness_Message.classList.add('Range_Message_Color_3');
+    isConsciousness = true;
+  } else {
+    Consciousness_Message.innerHTML = "잘못된 입력 값 입니다";
+    Consciousness_Message.classList.add('Range_Message_Color_3');
+    Consciousness_Range.classList.add('Range_Color_3');
+    isConsciousness = false;
+  }
+}
+
+
 		//의식상태 Range 유효성검사
 		const onChangeConsciousness_Range = (e) => {
 			const currentConsciousness_Range = document.getElementById('User_Consciousness_Range').value;
@@ -542,7 +560,7 @@
 			Consciousness_Message.classList.remove('Range_Message_Color_2')
 			Consciousness_Message.classList.remove('Range_Message_Color_3')
 
-		
+
 
 			if (currentConsciousness_Range == "0") {
 				Consciousness_Message.innerHTML = "명료";
@@ -585,30 +603,32 @@
 		}
 		// 내원일 수정
 		function getCurrentDateTime() {
-				const now = new Date();
-				const year = now.getFullYear();
-				const month = now.getMonth() + 1;
-				const day = now.getDate();
-				const hours = now.getHours();
-				const minutes = now.getMinutes();
+			const now = new Date();
+			const year = now.getFullYear();
+			const month = now.getMonth() + 1;
+			const day = now.getDate();
+			const hours = now.getHours();
+			const minutes = now.getMinutes();
 
-				const formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}T${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
-				return formattedDate;
-			}
+			const formattedDate =
+				`${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}T${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+			return formattedDate;
+		}
 
-			function ModalgetCurrentDateTime() {
-				const now = new Date();
-				const year = now.getFullYear();
-				const month = now.getMonth() + 1;
-				const day = now.getDate();
-				const hours = now.getHours();
-				const minutes = now.getMinutes();
+		function ModalgetCurrentDateTime() {
+			const now = new Date();
+			const year = now.getFullYear();
+			const month = now.getMonth() + 1;
+			const day = now.getDate();
+			const hours = now.getHours();
+			const minutes = now.getMinutes();
 
-				const formattedDate = `${year}년 ${month.toString().padStart(2, '0')}월 ${day.toString().padStart(2, '0')}일 ${hours.toString().padStart(2, '0')}시 ${minutes.toString().padStart(2, '0')}분 `;
-				return formattedDate;
-			}
+			const formattedDate =
+				`${year}년 ${month.toString().padStart(2, '0')}월 ${day.toString().padStart(2, '0')}일 ${hours.toString().padStart(2, '0')}시 ${minutes.toString().padStart(2, '0')}분 `;
+			return formattedDate;
+		}
 		document.getElementById('Hospital_Enroll').value = getCurrentDateTime();
-		document.getElementById('Modal_Hospital').innerHTML = ModalgetCurrentDateTime();	
+		document.getElementById('Modal_Hospital').innerHTML = ModalgetCurrentDateTime();
 
 
 		//내원일
@@ -622,7 +642,7 @@
 
 				const date = new Date(userInput)
 				const year = date.getFullYear();
-				const month = date.getMonth() + 1; 
+				const month = date.getMonth() + 1;
 				const day = date.getDate();
 				const hours = date.getHours();
 				const minutes = date.getMinutes();
@@ -638,11 +658,10 @@
 			}
 		}
 
-	
+
 		const onChangeGender = (e) => {
 			document.getElementById('Modal_Gender').innerHTML = 'Male';
-			// 애초에 이게 onChange함수이기때문에 아무선택안하면 이함수자체가 작동이안됨 흠 
-			// -> 걍 하드코딩 박아놓으면 어떤지 확인
+
 			var radioButtons = document.getElementsByName('userSex');
 			var selectedValue = null;
 
@@ -659,17 +678,16 @@
 		}
 
 		// 모달 버튼 누르면 모달 오픈(값이 true일시 열리기)
-		document.getElementById('Modal').addEventListener('click', function () {
-			if(isAge && isShrink && isRelaxation && isPulse && isBreath && isOxygen && isTemperature && isConsciousness && isDiseaseDate && isHospital){
+		document.getElementById('Modal').addEventListener('click', function (event) {
+			event.stopPropagation(); // 이벤트가 상위 요소로 전파되지 않도록 중지
+			// if(isAge && isShrink && isRelaxation && isPulse && isBreath && isOxygen && isTemperature && isConsciousness && isDiseaseDate && isHospital){
 			document.querySelector('.Modal_Black_Bg').classList.add('Open_Modal');
-			console.log('성공')
-			}else{
-				alert("입력값을 다시 확인해주세요")
-				console.log('실패')
-			}
-
-
-		})
+			console.log('성공');
+			// } else {
+			//     alert("입력값을 다시 확인해주세요");
+			//     console.log('실패');
+			// }
+		});
 
 
 		// 닫기 버튼 누르면 꺼지기
@@ -685,7 +703,10 @@
 		// 모달 움직이기 
 		$('.Modal_White_Bg').draggable();
 
-	
+
+		document.querySelector('.Modal_White_Bg').addEventListener('click', function (event) {
+			event.stopPropagation(); // 이벤트가 상위 요소로 전파되지 않도록 중지
+		});
 	</script>
 
 </body>

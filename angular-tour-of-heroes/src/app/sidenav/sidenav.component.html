@@ -20,49 +20,50 @@
 
 
   <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      WelCome Choose your Hero
-    </button>
-<div *ngIf="selectedHero">test</div>
-<div>another test</div>
-
-    <div *ngIf="selectedHero"class="Detial_Hero">
+    <div class="slider-Right">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        WelCome Choose your Hero
+      </button>
 
 
 
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-subtitle>{{selectedHero.name | uppercase}} Details</mat-card-subtitle>
-          <mat-card-title><span>id: </span>{{selectedHero.id}}</mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="Card_Content">
+      <div *ngIf="selectedHero" class="Detial_Hero">
 
-          <p>
-            <mat-form-field appearance="outline">
-              <mat-label>Enter New Hero Name</mat-label>
-              <input matInput #newNameInput id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
-              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-             
-            </mat-form-field>
-          </p>
-          <label for="hero-name">{{selectedHero.name | uppercase}}</label>
-          <mat-divider></mat-divider>
-        </mat-card-content>
-        <mat-card-actions>
-          <section>
-            <div class="example-button-row">
-              <button class="Change_Btn" (click)="updateHeroName(newNameInput.value)">Change Name</button>
-            </div>
-          </section>
-        </mat-card-actions>
-        <mat-card-footer>
 
-        </mat-card-footer>
-      </mat-card>
+
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-subtitle>{{selectedHero.name | uppercase}} Details</mat-card-subtitle>
+            <mat-card-title><span>id: </span>{{selectedHero.id}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="Card_Content">
+
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label>Enter New Hero Name</mat-label>
+                <input matInput #newNameInput id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+              </mat-form-field>
+            </p>
+            <label for="hero-name">{{selectedHero.name | uppercase}}</label>
+            <mat-divider></mat-divider>
+          </mat-card-content>
+          <mat-card-actions>
+            <section>
+              <div class="example-button-row">
+                <button class="Change_Btn" (click)="updateHeroName(newNameInput.value)">Change Name</button>
+              </div>
+            </section>
+          </mat-card-actions>
+          <mat-card-footer>
+
+          </mat-card-footer>
+        </mat-card>
+
+      </div>
 
     </div>
-
-
   </div>
 
 </mat-drawer-container>

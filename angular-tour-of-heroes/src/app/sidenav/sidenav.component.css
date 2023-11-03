@@ -125,9 +125,6 @@
 }
 
 
-.Detial_Hero{
-  margin-left: 32px;
-}
 
 
 /* button */
@@ -183,5 +180,13 @@ button:hover {
 }
 .Card_Content{
   margin-top: 8px;
+}
+
+
+.slider-Right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10%;
 }
 

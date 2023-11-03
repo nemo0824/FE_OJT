@@ -236,7 +236,7 @@
                 <!-- Atpye Content-------------------------------------------------------- -->
                 <div class="Content_Atype">
                     <div class="Input_Box_Atype">
-                        <div class="Input_Box_Header"> 와파린 복용시 Atype</div>
+                        <div class="Input_Box_Header"> Type-A</div>
                         <div class="Input_Box_Content_Row">
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
@@ -253,17 +253,17 @@
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
                                     <span class="Span_Tittle">빈혈 유무 </span>
-                                    <span class="Span_Tittle_Explain">Hd &lt; 13 g/dL(남), &lt;12 g/dL(여) </span> </div> <div
-                                            class="radio_wrap">
-                                            <div class="form_radio_btn radio_male">
-                                                <input id="radio-5" type="radio" name="Atype_anemia" value="Yes">
-                                                <label for="radio-5">Yes</label>
-                                            </div>
+                                    <span class="Span_Tittle_Explain">Hd &lt; 13 g/dL(남), &lt;12 g/dL(여) </span> </div>
+                                <div class="radio_wrap">
+                                    <div class="form_radio_btn radio_male">
+                                        <input id="radio-5" type="radio" name="Atype_anemia" value="Yes">
+                                        <label for="radio-5">Yes</label>
+                                    </div>
 
-                                            <div class="form_radio_btn">
-                                                <input id="radio-6" type="radio" name="Atype_anemia" value="No">
-                                                <label for="radio-6">No</label>
-                                            </div>
+                                    <div class="form_radio_btn">
+                                        <input id="radio-6" type="radio" name="Atype_anemia" value="No">
+                                        <label for="radio-6">No</label>
+                                    </div>
                                 </div>
 
 
@@ -273,17 +273,17 @@
                             <div class="Input_Box_Content">
                                 <div class="Input_Box_Tittle">
                                     <span class="Span_Tittle">콩팥질환 유무</span>
-                                    <span class="Span_Tittle_Explain">GFR  &lt; 30mL/min </span> </div> <div
-                                            class="radio_wrap">
-                                            <div class="form_radio_btn radio_male">
-                                                <input id="radio-7" type="radio" name="Atype_kidneys" value="Yes">
-                                                <label for="radio-7">Yes</label>
-                                            </div>
+                                    <span class="Span_Tittle_Explain">GFR &lt; 30mL/min </span> </div>
+                                <div class="radio_wrap">
+                                    <div class="form_radio_btn radio_male">
+                                        <input id="radio-7" type="radio" name="Atype_kidneys" value="Yes">
+                                        <label for="radio-7">Yes</label>
+                                    </div>
 
-                                            <div class="form_radio_btn">
-                                                <input id="radio-8" type="radio" name="Atype_kidneys" value="No">
-                                                <label for="radio-8">No</label>
-                                            </div>
+                                    <div class="form_radio_btn">
+                                        <input id="radio-8" type="radio" name="Atype_kidneys" value="No">
+                                        <label for="radio-8">No</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="Input_Box_Content">
@@ -334,7 +334,7 @@
                 <!-- Btype Content---------------- -->
                 <div class="Content_Btype">
                     <div class="Input_Box_Btype">
-                        <div class="Input_Box_Header"> 와파린 미복용시 Btype</div>
+                        <div class="Input_Box_Header"> Type-B</div>
                         <div class="ForScroll">
                             <div class="Input_Box_Content_Row">
                                 <div class="Input_Box_Content">
@@ -797,9 +797,8 @@
 
         const test = document.getElementById('Modal');
         test.addEventListener('click', function (event) {
+            event.stopPropagation();
             // event.preventDefault()
-            console.log('테스트 중', age && anemia && kidneys && bleeding && highBlood)
-            console.log(anemia)
 
             if (age && anemia && kidneys && bleeding && highBlood) {
                 getAtypeResult();
@@ -811,6 +810,15 @@
 
             }
         });
+
+        document.querySelector('.Modal_White_Bg').addEventListener('click', function (event) {
+			event.stopPropagation(); // Atype 이벤트가 상위 요소로 전파되지 않도록 중지
+		});
+
+
+        document.querySelector('.B_Modal_White_Bg').addEventListener('click', function (event) {
+			event.stopPropagation(); // 이벤트가 상위 요소로 전파되지 않도록 중지
+		});
     </script>
 </body>
 
