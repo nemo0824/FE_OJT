@@ -492,7 +492,7 @@ body {
 } */
 .Modal_Wrap_Up_Content_Title {
   width: 40%;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px;
   height: 50px;
   margin-top: 16px;
   background-color: #26a69a;
@@ -504,7 +504,7 @@ body {
 
 .Modal_Wrap_Up_Content_Value {
   width: 60%;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 4px;
   height: 50px;
   margin-top: 16px;
   background-color: var(--White_Color_2);
@@ -513,6 +513,7 @@ body {
   padding: 16px;
   color: var(--Gray_Color_2);
   font-weight: 600;
+  margin-left: 8px;
 }
 
 .Modal_tip {
@@ -542,12 +543,15 @@ body {
 }
 .Atype_Result_Red {
   color: var(--Red_Color);
+  font-weight: 500;
 }
 .Atype_Result_Orange {
   color: var(--Orange_Color);
+  font-weight: 500;
 }
 .Atype_Result_Green {
   color: var(--Green_Color);
+  font-weight: 600;
 }
 .Input_Box_Header {
   width: 100%;

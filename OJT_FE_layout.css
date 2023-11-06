@@ -267,7 +267,6 @@ body {
   height: 50px;
   margin-bottom: 32px;
   align-items: center;
-
 }
 .Modal_Wrap_Up_Content_1 {
   width: 50%;
@@ -324,17 +323,16 @@ body {
   box-shadow: 0.1px 0.2px 0.1px 0.2px inset;
 }
 
-#Modal_Close{
-	width: 80px;
+#Modal_Close {
+  width: 80px;
   height: 40px;
-	background-color: var(--Custom_color_1);
-	color: var(--White_Color_1);
-	border-radius: 4px;
+  background-color: var(--Custom_color_1);
+  color: var(--White_Color_1);
+  border-radius: 4px;
   border: transparent;
-	
 }
-#Modal_Close:hover{
-  background-color: var(--Custom_color_2)
+#Modal_Close:hover {
+  background-color: var(--Custom_color_2);
 }
 
 /*Main_Panel*/
@@ -366,35 +364,35 @@ body {
 
 /* 오른쪽 (호흡수, 산소포화도, 체온) */
 .Main_Panel_InputBox_Right_Second {
-	position: relative;
-	width: auto;
-	margin: 8px 16px 8px 8px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	box-shadow: 0px 1px 1px #ccc;
-	background: #fff;
-	height: auto;
-	padding: 16px;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-  }
+  position: relative;
+  width: auto;
+  margin: 8px 16px 8px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px #ccc;
+  background: #fff;
+  height: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 
-  /* 오른쪽 (의식상태 ) */
-  .Main_Panel_InputBox_Right_Third {
-	position: relative;
-	width: auto;
-	margin: 8px 16px 16px 8px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	box-shadow: 0px 1px 1px #ccc;
-	background: #fff;
-	height: auto;
-	padding: 16px;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-  }
+/* 오른쪽 (의식상태 ) */
+.Main_Panel_InputBox_Right_Third {
+  position: relative;
+  width: auto;
+  margin: 8px 16px 16px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px #ccc;
+  background: #fff;
+  height: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 
 .Main_Panel_Input {
   flex-grow: 1; /*width: calc(100% / 4);*/
@@ -475,9 +473,8 @@ body {
   font-size: 13px;
   width: calc(100% - 100px - 10px);
   margin-left: 10px;
-  
 }
-.Main_Panel_Input input[type="datetime-local"]{
+.Main_Panel_Input input[type="datetime-local"] {
   border: none;
   text-align: right;
   border: 1px solid #ccc;
@@ -508,19 +505,19 @@ body {
 
 /* 왼쪽 (구급차 여부, 중독 여부, CPR여부 , 주증상) */
 .Main_Panel_InputBox_left_Second {
-	position: relative;
-	width: calc(100% - 24px);
-	margin: 8px 8px 16px 16px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	box-shadow: 0px 1px 1px #ccc;
-	background: #fff;
-	height: 50%;
-	padding: 16px;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-  }
+  position: relative;
+  width: calc(100% - 24px);
+  margin: 8px 8px 16px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px #ccc;
+  background: #fff;
+  height: 50%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 
 .tip {
   position: absolute;
@@ -530,7 +527,7 @@ body {
   opacity: 0.8;
   width: 100%;
   margin-right: 16px;
-  color:#b73121;
+  color: #b73121;
   font-weight: 700;
   text-align: left;
 }
@@ -671,9 +668,7 @@ body {
   color: var(--White_Color_1);
   font-weight: 700;
   transition: 0.3s;
- 
 }
-
 
 .SummitBtn:hover {
   background-color: var(--Custom_color_2);
@@ -681,32 +676,32 @@ body {
 
 /* range 색상 변경 */
 .Range_Color_0 {
-  accent-color: var(--Green_Color);
+  accent-color: var(--Custom_color_1);
 }
 .Range_Color_1 {
-  accent-color: var(--Blue_Color);
+  accent-color: #005596;
 }
 .Range_Color_2 {
-  accent-color: var(--Orange_Color);
+  accent-color: #967e00;
 }
 .Range_Color_3 {
-  accent-color: var(--Red_Color);
+  accent-color: #b73121;
 }
 /* Range_Message 글자 색상변경 및 글자굵게  */
 .Range_Message_Color_0 {
-  color: var(--Green_Color);
+  color: var(--Custom_color_1);
   font-weight: bold;
 }
 .Range_Message_Color_1 {
-  color: var(--Blue_Color);
+  color: #005596;
   font-weight: bold;
 }
 .Range_Message_Color_2 {
-  color: var(--Orange_Color);
+  color: #967e00;
   font-weight: bold;
 }
 .Range_Message_Color_3 {
-  color: var(--Red_Color);
+  color: #b73121;
   font-weight: bold;
 }
 
@@ -734,7 +729,6 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-
 }
 
 #test23 {
@@ -742,25 +736,21 @@ body {
 
   display: flex;
   flex-direction: column;
-
 }
 
 #test5 {
   display: flex;
-
 }
 
-#Logo{
-	width: 100%;
-	padding: 8px;
+#Logo {
+  width: 100%;
+  padding: 8px;
   margin-top: 20px;
-	
 }
 
-#Modal_Hospital{
-	color: black;
+#Modal_Hospital {
+  color: black;
 }
-
 
 /* 닫기 */
 /* .close {
@@ -784,77 +774,75 @@ body {
 	transform: rotate(-45deg);
   } */
 
-  /* Modal 새롭게 리메이크 */
-  .Modal_Header{
-	width: 100%;
-	height: 50px;
-	background-color: var(--Custom_color_1);
-	display: flex;
-	align-items: center;
+/* Modal 새롭게 리메이크 */
+.Modal_Header {
+  width: 100%;
+  height: 50px;
+  background-color: var(--Custom_color_1);
+  display: flex;
+  align-items: center;
   padding: 16px;
-  }
-  .Modal_Wrap{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
+}
+.Modal_Wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 16px;
-  }
-  .Modal_Wrap_Up{
-	display: flex;
-	flex-direction: column;
+}
+.Modal_Wrap_Up {
+  display: flex;
+  flex-direction: column;
 
-	width: 100%;
-	height: 50%;
+  width: 100%;
+  height: 50%;
   padding: 16px 16px 8px 16px;
-  }
-  .Modal_Wrap_Down{
-	display: flex;
-	flex-direction: column;
-	height: 50%;
-	width: 100%;
+}
+.Modal_Wrap_Down {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
   padding: 8px 16px 16px 16px;
-  }
-  .Modal_Wrap_Up_Content{
-	display: flex;
-  }
-  .Modal_Wrap_Down_Content{
-	display: flex;
-  }
+}
+.Modal_Wrap_Up_Content {
+  display: flex;
+}
+.Modal_Wrap_Down_Content {
+  display: flex;
+}
 
-  .Modal_Header_Logo{
-	/* border: 1px solid black; */
+.Modal_Header_Logo {
+  /* border: 1px solid black; */
   height: 100%;
-	flex-grow: 1.5;
+  flex-grow: 1.5;
   display: flex;
   align-items: center;
-  }
-  .Modal_Header_Title{
-	/* border: 1px solid black; */
-	flex-grow: 8;
+}
+.Modal_Header_Title {
+  /* border: 1px solid black; */
+  flex-grow: 8;
   height: 100%;
-  }
-  .Modal_Header_Close{
-    flex-grow: 1;
-    /* border: 1px solid black; */
-    height: 100%;
-  }
+}
+.Modal_Header_Close {
+  flex-grow: 1;
+  /* border: 1px solid black; */
+  height: 100%;
+}
 
+#Header_Logo {
+  width: auto;
+  height: 18px;
+}
+#Header_Close {
+  width: auto;
+  height: 35px;
+  width: 40px;
+}
 
- 
-  #Header_Logo{
-    width: auto;
-    height: 18px;
-  }
-  #Header_Close{
-    width: auto;
-    height: 35px;
-    width: 40px;
-  }
-
-  .Modal_Wrap_Down_Content_Title{
+.Modal_Wrap_Down_Content_Title {
   width: 40%;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px;
   height: 50px;
   margin-top: 16px;
   background-color: var(--Custom_color_1);
@@ -862,23 +850,22 @@ body {
   align-items: center;
   padding: 16px;
   color: var(--White_Color_2);
-  
-  }
+}
 
-  .Modal_Wrap_Down_Content_Value{
-    width: 60%;
-    border-radius: 0px 4px 4px 0px;
-    height: 50px;
-    margin-top: 16px;
-    background-color: var(--White_Color_2);
-    display: flex;
-    align-items: center;
-    padding: 16px;
-   
-  }
-  .Modal_Wrap_Up_Content_Title{
+.Modal_Wrap_Down_Content_Value {
+  width: 60%;
+  border-radius: 4px;
+  height: 50px;
+  margin-top: 16px;
+  background-color: var(--White_Color_2);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  margin-left: 16px;
+}
+.Modal_Wrap_Up_Content_Title {
   width: 40%;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px;
   height: 50px;
   margin-top: 16px;
   background-color: var(--Custom_color_1);
@@ -886,71 +873,70 @@ body {
   align-items: center;
   padding: 16px;
   color: var(--White_Color_2);
-  
-  }
+}
 
-  .Modal_Wrap_Up_Content_Value{
-    width: 60%;
-    border-radius: 0px 4px 4px 0px;
-    height: 50px;
-    margin-top: 16px;
-    background-color: var(--White_Color_2);
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    
-  }
+.Modal_Wrap_Up_Content_Value {
+  width: 60%;
+  border-radius: 4px;
+  height: 50px;
+  margin-top: 16px;
+  background-color: var(--White_Color_2);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  margin-left: 16px;
+  font-weight: 500;
+}
 
-  .Modal_tip{
+.Modal_tip {
   font-size: 13px;
   opacity: 0.7;
   color: solid 1px var(--Black_Color_1);
   font-weight: 700;
   border-bottom: 1px solid #808080;
   height: 30px;
-  }
+}
 
-  .Modal_Header_Title{
-    font-size: 20px;
-    color: var(--White_Color_1);
-    display: flex;
-    align-items: center;
-    
-  }
-  .Modal_Header_Close{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-  }
-  .Modal_Wrap_Down1{
-    display: flex;
-    justify-content: right;
-    padding: 16px;
-  }
- 
-  /* 피드백 */
-  select {
-    text-align-last: center;
-    text-align: center;
-    -ms-text-align-last: center;
-    -moz-text-align-last: center;
- }
+.Modal_Header_Title {
+  font-size: 20px;
+  color: var(--White_Color_1);
+  display: flex;
+  align-items: center;
+}
+.Modal_Header_Close {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.Modal_Wrap_Down1 {
+  display: flex;
+  justify-content: right;
+  padding: 16px;
+}
 
- .Main_Tittle{
+/* 피드백 */
+select {
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
+}
+
+.Main_Tittle {
   width: calc(100% - 16px - 16px);
   margin: 0 16px;
   background-color: var(--Custom_color_1);
   border-radius: 4px;
   border: 1px solid #ccc;
   height: 55px;
-  font-weight : 700;
+  font-weight: 700;
   display: flex;
   justify-content: center;
   color: var(--White_Color_1);
   align-items: center;
   margin-top: 20px;
- }
- .Main_Panel_Input1{
+}
+.Main_Panel_Input1 {
   flex-grow: 1; /*width: calc(100% / 4);*/
   height: 10px;
   flex-wrap: wrap;
@@ -960,4 +946,16 @@ body {
   align-items: center;
   justify-items: center;
   position: relative;
- }
+}
+.Danger_Score_Green {
+  color: var(--Custom_color_1);
+  font-weight: 800;
+}
+.Danger_Score_Orange {
+  color: #967e00;
+  font-weight: 800;
+}
+.Danger_Score_Red {
+  color: #b73121;
+  font-weight: 800;
+}
