@@ -175,7 +175,7 @@
                                 HAS-BLED 출혈 위험 점수 : 총 <span id="B_Danger_Score"></span><span class="unit">점</span>
                             </div>
                             <div>
-                                위험군 연간 출혈사건 발생 위험도 : <span id="B_Danger_Percent"></span>
+                                연간 출혈사건 발생 위험도 : <span id="B_Danger_Percent"></span>
                                 <span class="unit">%</span>
                             </div>
                         </div>
@@ -524,29 +524,13 @@
                 document.getElementById('B_Modal').style.display = "block"
             }
         });
-        // AType 모달 ----------------------------------------------------------------
-        // 모달 버튼 누르면 모달 오픈(값이 true일시 열리기)
-        // document.getElementById('Modal').addEventListener('click', function () {
-        //     getAtypeResult();
+       
 
-        //     document.querySelector('.Modal_Black_Bg').classList.add('Open_Modal');
-        //     console.log('성공')
-
-        // })
-
-        // 닫기 버튼 누르면 꺼지기
-        document.getElementById('Modal_Close').addEventListener('click', function () {
-            document.querySelector('.Modal_Black_Bg').classList.remove('Open_Modal')
-        })
-
-        // 모달 검은색 눌렀을때 꺼지기
-        document.querySelector('.Modal_Black_Bg').addEventListener('click', function () {
-            document.querySelector('.Modal_Black_Bg').classList.remove('Open_Modal')
-        })
+       
 
         // 모달 움직이기 
         $('.Modal_White_Bg').draggable();
-
+        
         // Atype 결과 도출 -------------------------------------
         function getAtypeResult() {
             const Danger_Score = document.getElementById('Danger_Score')
@@ -618,9 +602,68 @@
             })
         })
 
+        // Atype 일때 값이 있는지 확인 
+        let age = document.getElementById("Atype_User_Age").value;
+        let anemia = document.querySelectorAll('input[name="Atype_anemia"]');
+        let kidneys = document.querySelectorAll('input[name="Atype_kidneys"]');
+        let bleeding = document.querySelectorAll('input[name="Atype_bleeding"]');
+        let highBlood = document.querySelectorAll('input[name="Atype_High_Blood"]');
 
 
+        anemia.forEach((item) => {
+            item.addEventListener('click', function () {
+                anemia = item.value;
+                console.log(anemia)
+            })
+        })
+        kidneys.forEach((item) => {
+            item.addEventListener('click', function () {
+                kidneys = item.value;
+            })
+        })
+        bleeding.forEach((item) => {
+            item.addEventListener('click', function () {
+                bleeding = item.value;
+            })
+        })
+        highBlood.forEach((item) => {
+            item.addEventListener('click', function () {
+                highBlood = item.value;
+            })
+        })
 
+        // 값이 있을시에만  모달 열리게 하기 
+        const test = document.getElementById('Modal');
+        test.addEventListener('click', function (event) {
+            event.stopPropagation();
+            // event.preventDefault()
+
+            if (age && anemia && kidneys && bleeding && highBlood) {
+                getAtypeResult();
+                document.querySelector('.Modal_Black_Bg').classList.add('Open_Modal');
+                console.log('성공');
+            } else {
+                console.log('실패');
+                alert('입력 확인해주세요')
+
+            }
+        });
+         // 닫기 버튼 누르면 꺼지기
+         document.getElementById('Modal_Close').addEventListener('click', function () {
+            document.querySelector('.Modal_Black_Bg').classList.remove('Open_Modal')
+        })
+
+        // 모달 검은색 눌렀을때 꺼지기
+        document.querySelector('.Modal_Black_Bg').addEventListener('click', function () {
+            document.querySelector('.Modal_Black_Bg').classList.remove('Open_Modal')
+        })
+
+        document.querySelector('.Modal_White_Bg').addEventListener('click', function (event) {
+            event.stopPropagation(); // Atype 이벤트가 상위 요소로 전파되지 않도록 중지
+        });
+
+
+      
 
 
 
@@ -643,14 +686,18 @@
             document.querySelector('.B_Modal_Black_Bg').classList.remove('B_Open_Modal')
         })
 
+        document.querySelector('.B_Modal_White_Bg').addEventListener('click', function (event) {
+            event.stopPropagation(); // 이벤트가 상위 요소로 전파되지 않도록 중지
+        });
+
+
+
         // 모달 움직이기 
         $('.B_Modal_White_Bg').draggable();
 
 
 
-        // Math.random 랜덤값 구하기 
-
-
+        // Math.random 랜덤값 구하기
         const Score = Math.floor(Math.random() * 10);
 
 
@@ -694,8 +741,6 @@
         }
 
         // Btype 요소 도출 
-
-
         let Btype_High_Blood = document.querySelectorAll('input[name="Btype_High_Blood"]');
         let Btype_Kidneys = document.querySelectorAll('input[name="Btype_Kidneys"]');
         let Btype_Liver = document.querySelectorAll('input[name="Btype_Liver"]');
@@ -757,68 +802,6 @@
                 document.getElementById('Btype_Bleeding').innerHTML = Btype_Bleeding_Value
             })
         })
-
-
-
-        // Atype일떄
-        let age = document.getElementById("Atype_User_Age").value;
-        let anemia = document.querySelectorAll('input[name="Atype_anemia"]');
-        // let kidneys = document.querySelector('input[name="Atype_kidneys"]:checked');
-        // 여기서는 null 값이 나옴
-        let kidneys = document.querySelectorAll('input[name="Atype_kidneys"]');
-        let bleeding = document.querySelectorAll('input[name="Atype_bleeding"]');
-        let highBlood = document.querySelectorAll('input[name="Atype_High_Blood"]');
-        console.log('빈혈 확인 중', anemia)
-        console.log('신장 확인 중', kidneys)
-        // function validateAtypeInputs() {
-
-        anemia.forEach((item) => {
-            item.addEventListener('click', function () {
-                anemia = item.value;
-                console.log(anemia)
-            })
-        })
-        kidneys.forEach((item) => {
-            item.addEventListener('click', function () {
-                kidneys = item.value;
-            })
-        })
-        bleeding.forEach((item) => {
-            item.addEventListener('click', function () {
-                bleeding = item.value;
-            })
-        })
-        highBlood.forEach((item) => {
-            item.addEventListener('click', function () {
-                highBlood = item.value;
-            })
-        })
-
-
-        const test = document.getElementById('Modal');
-        test.addEventListener('click', function (event) {
-            event.stopPropagation();
-            // event.preventDefault()
-
-            if (age && anemia && kidneys && bleeding && highBlood) {
-                getAtypeResult();
-                document.querySelector('.Modal_Black_Bg').classList.add('Open_Modal');
-                console.log('성공');
-            } else {
-                console.log('실패');
-                alert('입력 확인해주세요')
-
-            }
-        });
-
-        document.querySelector('.Modal_White_Bg').addEventListener('click', function (event) {
-			event.stopPropagation(); // Atype 이벤트가 상위 요소로 전파되지 않도록 중지
-		});
-
-
-        document.querySelector('.B_Modal_White_Bg').addEventListener('click', function (event) {
-			event.stopPropagation(); // 이벤트가 상위 요소로 전파되지 않도록 중지
-		});
     </script>
 </body>
 

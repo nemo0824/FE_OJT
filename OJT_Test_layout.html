@@ -543,13 +543,16 @@
 
 		//의식상태 Range 유효성검사
 		const onChangeConsciousness_Range = (e) => {
-			const currentConsciousness_Range = document.getElementById('User_Consciousness_Range').value;
-
+			// Range 값
+			const currentConsciousness_Range = document.getElementById('User_Consciousness_Range').value;	
+			// Range 알림메시지 
 			const Consciousness_Message = document.getElementById('Consciousness_Message');
-
+			// 의식상태 input 
 			const Consciousness = document.getElementById('User_Consciousness');
-
+			// Range색상 바꾸기위한 Range
 			const Consciousness_Range = document.getElementById('User_Consciousness_Range');
+
+
 			// 다시 선택시 Range 색 초기화 
 			Consciousness_Range.classList.remove('Range_Color_0')
 			Consciousness_Range.classList.remove('Range_Color_1')
@@ -659,9 +662,9 @@
 			}
 		}
 
-
+		// Gender 값 checked되었는지 확인 및 기본값 male 선택시 다른 값 출력, 모달창에 값 전달
 		const onChangeGender = (e) => {
-			document.getElementById('Modal_Gender').innerHTML = 'Male';
+			
 
 			var radioButtons = document.getElementsByName('userSex');
 			var selectedValue = null;
@@ -673,9 +676,15 @@
 					break;
 				}
 			}
+			
+			if(selectedValue !== null){
+				document.getElementById('Modal_Gender').innerHTML = selectedValue;
+			}else{
+				document.getElementById('Modal_Gender').innerHTML = 'Male';
+			}
 
 
-			document.getElementById('Modal_Gender').innerHTML = selectedValue;
+			
 		}
 
 		// 모달 버튼 누르면 모달 오픈(값이 true일시 열리기)
@@ -707,14 +716,16 @@
 		$('.Modal_White_Bg').draggable();
 
 
+		// 이벤트가 상위 요소로 전파되지 않도록 중지 이벤트버블링
 		document.querySelector('.Modal_White_Bg').addEventListener('click', function (event) {
-			event.stopPropagation(); // 이벤트가 상위 요소로 전파되지 않도록 중지
+			event.stopPropagation(); 
 		});
+
 
 		// Math.random 랜덤값 구하기
 		const Score = Math.floor(Math.random() * 10);
 
-		
+		// Math.random 랜덤값을 이용한 점수별 색상 변경 
 		function getBtypeResult() {
 			const Danger_Scores = document.getElementsByClassName('Modal_Wrap_Down_Content_Value')
 			
