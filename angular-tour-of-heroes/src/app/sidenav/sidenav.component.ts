@@ -22,11 +22,19 @@ export class SidenavComponent {
   
 
   }
+  
+
   @Input() hero?: Hero;
 
   updateHeroName(newName: string): void {
     if (this.hero) {
       this.hero.name = newName;
+    }
+  }
+
+  updateHeroImage(newName : string): void{
+    if(this.selectedHero){
+      this.selectedHero.name = newName
     }
   }
 }

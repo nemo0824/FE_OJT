@@ -20,10 +20,19 @@
 
 
   <div class="example-sidenav-content">
-    <div class="slider-Right">
+    
+    <div class="slider_Right_Wrap">
       <button type="button" mat-button (click)="drawer.toggle()">
         WelCome Choose your Hero
       </button>
+
+    
+    <div class="slider-Right">
+      <div class="Image_Container">
+        <img *ngIf="selectedHero" [src]="selectedHero.imageURL" alt="Hero Image" class="Image_list">
+      </div>
+
+      
 
 
 
@@ -64,6 +73,7 @@
       </div>
 
     </div>
+  </div>
   </div>
 
 </mat-drawer-container>
